@@ -1,5 +1,4 @@
 <script>
-
 export default {
   data() {
     return {
@@ -71,9 +70,9 @@ export default {
 </script>
 
 <template>
-
+  <div>
     <el-row class="title">
-      <el-col :span="20"><h1>{{ title }}</h1></el-col>
+      <el-col :span="22"><h1>{{ title }}</h1></el-col>
     </el-row>
 
     <el-row>
@@ -114,14 +113,14 @@ export default {
         </a>
       </span>
     </el-row>
-
+  </div>
 </template>
 
 <style>
 
 .el-row {
   justify-content: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -153,7 +152,7 @@ a {
 .title {
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
-  font-size: 35px;
+  font-size: 32px;
   margin-top: 30px;
   margin-bottom: 0px;
   text-align: center;
