@@ -71,13 +71,13 @@ export default {
 
 <template>
   <div>
-    <el-row class="title">
-      <el-col :span="22"><h1>{{ title }}</h1></el-col>
+    <el-row>
+      <el-col :span="22"><h1 class="title0">{{ title }}</h1></el-col>
     </el-row>
 
     <el-row>
       <span v-for="author in authors">
-        <a :href=author.homepage>
+        <a :href=author.homepage class="btn_link">
           <el-button type="primary" text>
             <span class="author">
               {{ author.name }}<sup v-if="author.address_flag" style="color: #606266">{{ author.address_flag }}</sup>
@@ -89,7 +89,7 @@ export default {
 
     <el-row>
       <span v-for="address in addresses">
-        <a :href=address.homepage>
+        <a :href=address.homepage class="btn_link">
           <el-button type="" text>
             <span class="address">
               <sup v-if="address.address_flag" style="color: #606266">{{ address.address_flag }}</sup>{{ address.name }}
@@ -123,7 +123,7 @@ export default {
   margin-bottom: 10px;
 }
 
-a {
+a.btn_link {
   color: hsl(204, 86%, 53%);
   text-decoration: none;
 }
@@ -149,12 +149,10 @@ a {
   font-size: 18px;
 }
 
-.title {
+.title0 {
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
-  font-size: 32px;
-  margin-top: 30px;
-  margin-bottom: 0px;
+  font-size: 42px;
   text-align: center;
 }
 

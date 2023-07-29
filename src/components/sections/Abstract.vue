@@ -11,11 +11,11 @@ export default {
 
 <template>
   <div class="bg">
-    <el-row class="title1" >
-      <h1>Abstract</h1>
+    <el-row>
+      <h1 class="title1">Abstract</h1>
     </el-row>
     <el-row>
-      <el-col class="abstract" :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
+      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
         <p>{{ abstract }}</p>
       </el-col>
     </el-row>
@@ -27,10 +27,9 @@ export default {
 .title1 {
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: -1em;
+  margin-bottom: 0px;
 }
 
 .bg {
