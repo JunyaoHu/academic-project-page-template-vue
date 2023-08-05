@@ -3,11 +3,11 @@ export default {
     data() {
     return {
         source_paths: [
-        "./src/assets/carousel/1.jpg",
-        "./src/assets/carousel/2.jpg",
-        "./src/assets/carousel/3.jpg",
-        "./src/assets/carousel/4.jpg",
-        "./src/assets/carousel/5.jpg",
+        "/carousel/1.jpg",
+        "/carousel/2.jpg",
+        "/carousel/3.jpg",
+        "/carousel/4.jpg",
+        "/carousel/5.jpg",
       ],
     }
   }
