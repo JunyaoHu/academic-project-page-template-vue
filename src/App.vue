@@ -6,6 +6,7 @@ import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 
 export default {
+  
   components: {
     // Header,
     Main,
@@ -26,3 +27,7 @@ export default {
     <el-backtop :right="40" :bottom="40" />
   </div>
 </template>
+
+<style>
+
+</style>

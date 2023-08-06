@@ -1,13 +1,30 @@
 <script>
+import { Swiper, SwiperSlide} from 'swiper/vue';
+import { Navigation, Pagination, Autoplay} from 'swiper/modules';
+import 'swiper/css/bundle';
+
 export default {
-    data() {
+  components: {
+      Swiper,
+      SwiperSlide,
+      Navigation,
+      Pagination,
+      Autoplay,
+    },
+  data() {
     return {
+        modules: [
+          Navigation,
+          Pagination,
+          Autoplay,
+        ],
         source_paths: [
         "./carousel/1.jpg",
         "./carousel/2.jpg",
         "./carousel/3.jpg",
         "./carousel/4.jpg",
         "./carousel/5.jpg",
+        "./carousel/6.jpg",
       ],
     }
   }
@@ -16,33 +33,40 @@ export default {
 
 <template>
   <div>
-    <el-carousel height="auto" trigger="click" type="card" style="text-align: center">
-      <el-carousel-item v-for="path in source_paths" style="height: 540px">
+    <!-- <el-carousel height="540px" trigger="click" type="card" style="text-align: center">
+      <el-carousel-item v-for="path in source_paths">
         <el-image :src="path"/>
       </el-carousel-item>
-    </el-carousel>
+    </el-carousel> -->
+
+    <swiper
+      :loop="true"
+      :modules="modules"
+      :slides-per-view="3"
+      :navigation="{ }"
+      :pagination="{ 
+        clickable:true, 
+        type:'bullets' 
+      }"
+      :autoplay="{ 
+        delay:5000,
+        disableOnInteraction:false,
+        pauseOnMouseEnter:true,
+      }"
+      >
+      <swiper-slide v-for="path in source_paths">
+        <el-image :src="path"/>
+      </swiper-slide>
+    </swiper>
+
   </div>
 </template>
   
-<style scoped>
-.demonstration {
-    color: var(--el-text-color-secondary);
+<style>
+
+.swiper {
+  --swiper-theme-color: white;/* 设置Swiper风格 */
 }
 
-.el-carousel__item h3 {
-    color: #539af7;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-    text-align: center;
-}
-
-.el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-    background-color: #d3dce6;
-}
 </style>
   

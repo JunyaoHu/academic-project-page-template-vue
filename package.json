@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "element-plus": "^2.3.8",
+    "swiper": "^10.1.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
