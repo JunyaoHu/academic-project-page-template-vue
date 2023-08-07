@@ -18,7 +18,7 @@ export default {
           Pagination,
           Autoplay,
         ],
-        source_paths: [
+        image_paths: [
         "./carousel/1.jpg",
         "./carousel/2.jpg",
         "./carousel/3.jpg",
@@ -33,16 +33,19 @@ export default {
 
 <template>
   <div>
-    <!-- <el-carousel height="540px" trigger="click" type="card" style="text-align: center">
-      <el-carousel-item v-for="path in source_paths">
-        <el-image :src="path"/>
-      </el-carousel-item>
-    </el-carousel> -->
 
     <swiper
       :loop="true"
+      :slidesPerView="1"
+      :breakpoints="{
+        600: {
+          slidesPerView: 2,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+      }"
       :modules="modules"
-      :slides-per-view="3"
       :navigation="{ }"
       :pagination="{ 
         clickable:true, 
@@ -54,7 +57,7 @@ export default {
         pauseOnMouseEnter:true,
       }"
       >
-      <swiper-slide v-for="path in source_paths">
+      <swiper-slide v-for="path in image_paths">
         <el-image :src="path"/>
       </swiper-slide>
     </swiper>
