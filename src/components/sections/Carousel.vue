@@ -33,35 +33,37 @@ export default {
 
 <template>
   <div>
-
-    <swiper
-      :loop="true"
-      :slidesPerView="1"
-      :breakpoints="{
-        600: {
-          slidesPerView: 2,
-        },
-        800: {
-          slidesPerView: 3,
-        },
-      }"
-      :modules="modules"
-      :navigation="{ }"
-      :pagination="{ 
-        clickable:true, 
-        type:'bullets' 
-      }"
-      :autoplay="{ 
-        delay:5000,
-        disableOnInteraction:false,
-        pauseOnMouseEnter:true,
-      }"
-      >
-      <swiper-slide v-for="path in image_paths">
-        <el-image :src="path"/>
-      </swiper-slide>
-    </swiper>
-
+    <el-row>
+      <el-col :lg="24" :xl="16">
+        <swiper
+          :loop="true"
+          :slidesPerView="1"
+          :breakpoints="{
+            600: {
+              slidesPerView: 2,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+          }"
+          :modules="modules"
+          :navigation="{ }"
+          :pagination="{ 
+            clickable:true, 
+            type:'bullets' 
+          }"
+          :autoplay="{ 
+            delay:5000,
+            disableOnInteraction:false,
+            pauseOnMouseEnter:true,
+          }"
+          >
+          <swiper-slide v-for="path in image_paths">
+            <el-image :src="path"/>
+          </swiper-slide>
+        </swiper>
+      </el-col>
+    </el-row>
   </div>
 </template>
   
