@@ -36,7 +36,7 @@ export default {
         <div class="flex-grow" />
             <el-sub-menu index="2">
             <template #title>More</template>
-            <el-menu-item index="2-1"><a href="https://zzcheng.top/MPOT/">Multiple Planar Object Tracking - ICCV 2023</a></el-menu-item>
+            <el-menu-item index="2-1"><a href="https://zzcheng.top/MPOT/">MPOT - ICCV 2023</a></el-menu-item>
             <el-menu-item index="2-2">item two</el-menu-item>
             <el-menu-item index="2-3">item three</el-menu-item>
                 <el-sub-menu index="2-4">
@@ -92,6 +92,18 @@ a {
     fill: #409EFF;
 }
 
+.el-popper {
+    min-width: min(50%, 300px);
+}
+
+.el-menu--popup {
+    min-width: 100%;
+}
+
+.el-menu--popup a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 </style>
 
   
