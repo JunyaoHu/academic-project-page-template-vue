@@ -18,8 +18,8 @@ export default {
 
 <template>
     <Title/>
-    <!-- <Video/> -->
-    <!-- <Carousel/> -->
+    <Video/>
+    <Carousel/>
     <Abstract/>
     <BibTeX/>
 </template>
