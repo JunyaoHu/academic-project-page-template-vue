@@ -7,7 +7,7 @@ export default {
             link: "https://junyaohu.github.io/",
         },
         logo: {
-            name: "Our Project Template is All You Need",
+            name: "OPT",
             link: "#",
         },
     }
@@ -30,8 +30,8 @@ export default {
         </el-menu-item>
         <div class="flex-grow" />
             <el-sub-menu index="2">
-            <template #title>More Research</template>
-            <el-menu-item index="2-1"><a href="https://zzcheng.top/MPOT/" target="_blank">Multiple Planar Object Tracking - ICCV 2023</a></el-menu-item>
+            <template #title>More</template>
+            <el-menu-item index="2-1"><a href="https://zzcheng.top/MPOT/">Multiple Planar Object Tracking - ICCV 2023</a></el-menu-item>
             <el-menu-item index="2-2">item two</el-menu-item>
             <el-menu-item index="2-3">item three</el-menu-item>
                 <el-sub-menu index="2-4">
