@@ -1,5 +1,4 @@
 <script>
-
 import Title from './sections/Title.vue'
 import Abstract from './sections/Abstract.vue'
 import BibTeX from './sections/BibTeX.vue'
@@ -19,8 +18,8 @@ export default {
 
 <template>
     <Title/>
-    <Video/>
-    <Carousel/>
+    <!-- <Video/> -->
+    <!-- <Carousel/> -->
     <Abstract/>
     <BibTeX/>
 </template>
