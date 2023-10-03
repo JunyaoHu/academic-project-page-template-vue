@@ -28,5 +28,8 @@ export default {
 </template>
 
 <style>
-
+.el-header {
+  padding: 0px;
+  height: 60px;
+}
 </style>
