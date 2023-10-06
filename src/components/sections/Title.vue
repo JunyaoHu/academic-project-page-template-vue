@@ -2,7 +2,9 @@
 export default {
   data() {
     return {
-      title: 'Our Project Template is All You Need',
+      title: 'Academic Project Page Template',
+      color_title: '(Vue based)',
+      title_color: '#42B883',
       authors: [
         {
           name: "Junyao Hu",
@@ -72,7 +74,12 @@ export default {
 <template>
   <div>
     <el-row>
-      <el-col :span="22"><h1 class="title0">{{ title }}</h1></el-col>
+      <el-col :span="22">
+        <h1 class="title0">
+          {{ title }}
+          <span v-if="color_title" :style="{color:title_color}"> {{ color_title }}</span>
+        </h1>
+      </el-col>
     </el-row>
 
     <el-row>
