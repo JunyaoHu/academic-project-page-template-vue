@@ -58,10 +58,6 @@ export default {
   <el-row>
     <h1 class="title1">Image Slider</h1>
   </el-row>
-  <div>
-      <label style="margin-right: 16px">Switch Loading</label>
-      <el-switch v-model="inputLoading" />
-  </div>
   <el-row>
     <el-col>
       <el-row justify="space-evenly">
