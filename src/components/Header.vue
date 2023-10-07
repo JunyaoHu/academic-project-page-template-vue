@@ -67,7 +67,7 @@ a {
 
 </style>
 
-<style>
+<style scoped>
 .el-sub-menu__title {
     font-size: 18px;
 }

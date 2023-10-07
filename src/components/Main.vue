@@ -4,6 +4,7 @@ import Abstract from './sections/Abstract.vue'
 import BibTeX from './sections/BibTeX.vue'
 import Carousel from './sections/Carousel.vue'
 import Video from './sections/Video.vue'
+import ImageSlider from './sections/ImageSlider.vue'
 
 export default {
   components: {
@@ -12,6 +13,7 @@ export default {
     BibTeX,
     Carousel,
     Video,
+    ImageSlider,
   }
 }
 </script>
@@ -21,5 +23,6 @@ export default {
     <Video/>
     <Carousel/>
     <Abstract/>
+    <ImageSlider/>
     <BibTeX/>
 </template>
