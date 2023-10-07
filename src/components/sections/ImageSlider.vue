@@ -3,19 +3,47 @@ export default {
   data() {
     return {
       sliderValue: 0, // 滑块的值
-      inputImagePath:  './image_slider/huaqiang/input/', // 图片存放路径
-      outputImagePath: './image_slider/huaqiang/output/',
+      inputImageRootPath:  './image_slider/huaqiang/input/', // 图片存放路径
+      outputImageRootPath: './image_slider/huaqiang/output/',
+      inputImagePath: '',
+      outputImagePath: '',
       minValue: 0,
       maxValue: 9,
+      loading: true
     };
   },
-  computed: {
-    // 根据滑块的值构建图片的资源路径
-    inputImageSrc() {
-      return `${this.inputImagePath}${this.sliderValue}.png`;
+  beforeMount() {
+    // 在组件挂载之前预加载第一张图片
+    this.loadImage(this.sliderValue, this.inputImageRootPath, 'input');
+    this.loadImage(this.sliderValue, this.outputImageRootPath, 'output');
+  },
+  methods: {
+    handleChange(value) {
+      // 当滑块的值改变时，加载对应的图片
+      console.log(this.loading);
+      this.loadImage(value, this.inputImageRootPath, 'input');
+      this.loadImage(value, this.outputImageRootPath, 'output');
+      console.log(this.loading);
     },
-    outputImageSrc() {
-      return `${this.outputImagePath}${this.sliderValue}.png`;
+    loadImage(value, path, type) {
+      // 构建图片路径
+      this.loading = true;
+      const imagePath = `${path}${value}.png`;
+      // 创建一个新的Image对象用于预加载
+      const image = new Image();
+      image.src = imagePath;
+      // 监听图片加载完成事件
+      image.onload = () => {
+        // 图片加载完成后，更新当前图片路径
+        if (type == 'input') {
+          this.inputImagePath = imagePath;
+          console.log(this.inputImagePath);
+        } else {
+          this.outputImagePath = imagePath;
+          console.log(this.outputImagePath);
+        }
+      };
+      this.loading = false;
     },
   },
 };
@@ -23,38 +51,50 @@ export default {
 
 <template>
   <div class="bg">
-    <el-row>
-      <h1 class="title1">Image Slider</h1>
-    </el-row>
-    <el-row>
-      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
-        <el-row justify="space-evenly">
-            <el-col :xs="10" :sm="10" :md="8" :lg="6" :xl="6">
-                <div class="demo-image">
-                    <div class="block">
-                        <el-image :src="inputImageSrc" fit="scale-down"/>
-                        <span class="demonstration">input</span>
-                    </div>
-                </div>
-            </el-col>
-            <el-col :xs="10" :sm="10" :md="8" :lg="6" :xl="6">
-                <div class="demo-image">
-                    <div class="block">
-                        <el-image :src="outputImageSrc" fit="scale-down"/>
-                        <span class="demonstration">output</span>
-                    </div>
-                </div>
-            </el-col>
-        </el-row>
+  <el-row>
+    <h1 class="title1">Image Slider</h1>
+  </el-row>
+  <el-row>
+    <el-col>
+      <el-row justify="space-evenly">
+        <el-col :lg="10" :xl="6">
+          <div class="demo-image">
+            <div class="block">
+              <el-skeleton
+              style="width: 100%"
+              :loading="loading"
+              animated
+              :throttle="100"
+              >
+                <template #template>
+                  <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
+                </template>
+                <template #default>
+                  <el-image :src="inputImagePath" fit="scale-down"/>
+                </template>
+              </el-skeleton>
+              <span class="demonstration">input: {{ inputImagePath }}</span>
+            </div>
+          </div>
+        </el-col>
+        <el-col :lg="10" :xl="6">
+          <div class="demo-image">
+            <div class="block">
+              <el-image :src="outputImagePath" fit="scale-down"/>
+              <span class="demonstration">output: {{ outputImagePath }}</span>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
     </el-col>
-    </el-row>
-    <el-row>
-      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
-        <div class="slider-demo-block">
-            <el-slider v-model="sliderValue" show-input :min="minValue" :max="maxValue" />
-        </div>
-      </el-col>
-    </el-row>
+  </el-row>
+  <el-row>
+    <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
+    <div class="slider-demo-block">
+      <el-slider v-model="sliderValue" show-input :min="minValue" :max="maxValue" @input="handleChange"/>
+    </div>
+    </el-col>
+  </el-row>
   </div>
 </template>
 
