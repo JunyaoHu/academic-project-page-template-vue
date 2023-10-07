@@ -67,7 +67,7 @@ a {
 
 </style>
 
-<style scoped>
+<style>
 .el-sub-menu__title {
     font-size: 18px;
 }
@@ -92,10 +92,6 @@ a {
     fill: #409EFF;
 }
 
-.el-popper {
-    min-width: min(50%, 300px);
-}
-
 .el-menu--popup {
     min-width: 100%;
 }
@@ -103,6 +99,12 @@ a {
 .el-menu--popup a {
     text-overflow: ellipsis;
     overflow: hidden;
+}
+</style>
+
+<style scoped>
+.el-popper {
+    min-width: min(50%, 300px);
 }
 </style>
 
