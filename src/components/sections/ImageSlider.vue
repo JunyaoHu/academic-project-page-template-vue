@@ -40,11 +40,11 @@ export default {
           // 图片加载完成后，更新当前图片路径
           if (type == 'input') {
             this.inputImagePath = imagePath;
-            console.log(this.inputImagePath);
+            // console.log(this.inputImagePath);
             this.inputLoading = false;
           } else {
             this.outputImagePath = imagePath;
-            console.log(this.outputImagePath);
+            // console.log(this.outputImagePath);
             this.outputLoading = false;
           }
       };

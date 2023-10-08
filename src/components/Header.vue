@@ -74,14 +74,16 @@ a {
 
 .el-affix--fixed {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-.el-affix--fixed>.el-menu {
-    background-color: rgb(250,250,250,0.9);
+    background-image: radial-gradient(#ffffffdb 1px,#ffffff 1px);
+    background-size: 3px 3px;
 }
 
 .btn_icon {
     color: black;
+}
+
+.el-menu {
+    background: none;
 }
 
 .el-menu-item:hover {
