@@ -29,13 +29,13 @@ export default {
         {
           address_flag: "1",
           name: "Nankai University",
-          icon: "",
+          icon: "https://www.nankai.edu.cn/_upload/article/images/77/1f/a7852bfa49c3bdea0f4564630e66/c658ec37-5315-4c7c-b5d5-aee3e3e570d3.jpg",
           homepage: "https://cv.nankai.edu.cn/"
         },
         {
           address_flag: "2",
           name: "Another University",
-          icon: "",
+          icon: "https://www.nankai.edu.cn/_upload/article/images/77/1f/a7852bfa49c3bdea0f4564630e66/c658ec37-5315-4c7c-b5d5-aee3e3e570d3.jpg",
           homepage: "https://cv.nankai.edu.cn/"
         },
       ],
@@ -85,7 +85,8 @@ export default {
     <el-row>
       <span v-for="author in authors">
         <a :href=author.homepage class="btn_link">
-          <el-button type="primary" text>
+          <el-button class="title-button" type="primary" text>
+            <el-avatar v-if="author.icon" class="author-icon" :size="40" :src="author.icon" />
             <span class="author">
               {{ author.name }}<sup v-if="author.address_flag" style="color: #606266">{{ author.address_flag }}</sup>
             </span>
@@ -97,7 +98,8 @@ export default {
     <el-row>
       <span v-for="address in addresses">
         <a :href=address.homepage class="btn_link">
-          <el-button type="" text>
+          <el-button class="title-button"  type="" text>
+            <el-avatar v-if="address.icon" class="author-icon" :size="40" :src="address.icon" />
             <span class="address">
               <sup v-if="address.address_flag" style="color: #606266">{{ address.address_flag }}</sup>{{ address.name }}
             </span>
@@ -174,4 +176,18 @@ a.btn_link {
 .el-button .btn_icon {
   fill:#ebebeb;
 }
+
+.title-button {
+  height: auto;
+}
+
+.el-avatar {
+  margin-right: 6px;
+  box-shadow: var(--el-box-shadow-lighter); 
+}
+
+.el-avatar:hover {
+  border: 1px solid #409EFF;
+}
+
 </style>
