@@ -4,9 +4,9 @@ export default {
     return {
       bibtex: [
         "@article{junyaohu2023template,",
-        "    title={Our Project Template is All You Need},",
+        "    title={Academic Project Page Template Vue},",
         "    author={Hu, Junyao},",
-        "    journal={Something},",
+        "    journal={GitHub},",
         "    year={2023}",
         "}",
       ],

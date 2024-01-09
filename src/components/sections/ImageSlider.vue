@@ -56,7 +56,7 @@ export default {
 <template>
   <div class="bg">
   <el-row>
-    <h1 class="title1">Image Slider</h1>
+    <h1 class="title1">Qualitative Results</h1>
   </el-row>
   <el-row>
     <el-col>

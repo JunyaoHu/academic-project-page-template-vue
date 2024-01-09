@@ -39,7 +39,10 @@ export default {
           homepage: "https://cv.nankai.edu.cn/"
         },
       ],
-      emphasis: "Something that needs to be emphasized 🥰",
+      emphases: [
+        "This template project is still under development.",
+        "Welcome any suggestion. 🥰",
+      ],
       buttons: [
         {
           disabled: false,
@@ -108,8 +111,8 @@ export default {
       </span>
     </el-row>
 
-    <el-row class="emphasis">
-      {{ emphasis }}
+    <el-row class="emphasis" v-for="emphasis in emphases">
+        {{ emphasis }}
     </el-row>
 
     <el-row justify="center">

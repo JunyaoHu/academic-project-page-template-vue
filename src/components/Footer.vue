@@ -14,8 +14,9 @@ export default {
     <el-row>
       <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
           <p class="footer">
-            The template is inspired by <a class="footer_link" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, powered by <a class="footer_link" href="https://vuejs.org/">Vue.</a><br/>
-            You can fork🛠️ / star✨/ PR📃 this template from <a class="footer_link" href="https://github.com/JunyaoHu/Our-Project-Template-is-All-You-Need">Our Project Template is All You Need</a>
+            The template is inspired by <a class="footer_link" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, powered by <a class="footer_link" href="https://vuejs.org/">Vue</a>.<br/>
+            You can fork🛠️ / star✨/ PR📃 this template<br/>
+            from <a class="footer_link" href="https://github.com/JunyaoHu/academic-project-page-template-vue">Academic Project Page Template Vue</a>.
           </p>
       </el-col>
     </el-row>
