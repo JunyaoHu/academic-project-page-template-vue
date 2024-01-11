@@ -6,6 +6,7 @@ import Carousel from './sections/Carousel.vue'
 import Video from './sections/Video.vue'
 import ImageSlider from './sections/ImageSlider.vue'
 import Echart from './sections/Echart.vue'
+import Comment from './sections/Comment.vue'
 
 export default {
   components: {
@@ -16,6 +17,7 @@ export default {
     Video,
     ImageSlider,
     Echart,
+    Comment,
   }
 }
 </script>
@@ -28,4 +30,5 @@ export default {
     <Echart/>
     <ImageSlider/>
     <BibTeX/>
+    <Comment/>
 </template>
