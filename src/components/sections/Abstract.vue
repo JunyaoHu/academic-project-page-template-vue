@@ -10,11 +10,14 @@ export default {
 </script>
 
 <template>
-  <div class="bg">
-    <el-row>
-      <h1 class="title1">Abstract</h1>
+  <div>
+    <el-divider />
+
+    <el-row justify="center">
+      <h1 class="section-title">Abstract</h1>
     </el-row>
-    <el-row>
+
+    <el-row justify="center">
       <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
         <p>{{ abstract }}</p>
       </el-col>
@@ -23,18 +26,6 @@ export default {
 </template>
 
 <style>
-
-.title1 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 0px;
-}
-
-.bg {
-  background-color: rgb(235, 235, 235);
-}
 
 p {
   text-align: justify;

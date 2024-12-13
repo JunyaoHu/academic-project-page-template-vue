@@ -54,63 +54,68 @@ export default {
 </script>
 
 <template>
-  <div class="bg">
-  <el-row>
-    <h1 class="title1">Qualitative Results</h1>
-  </el-row>
-  <el-row>
-    <el-col>
-      <el-row justify="space-evenly">
-        <el-col :lg="10" :xl="6">
-          <div class="demo-image">
-            <div class="block">
-              <el-skeleton
-              style="width: 100%"
-              :loading="inputLoading"
-              animated
-              :throttle="1000"
-              >
-                <template #template>
-                  <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                </template>
-                <template #default>
-                  <el-image :src="inputImagePath" fit="scale-down"/>
-                </template>
-              </el-skeleton>
-              <span class="demonstration">input: {{ inputImagePath }}</span>
+  <div>
+    <el-divider />
+
+    <el-row justify="center">
+      <h1 class="section-title">Qualitative Results</h1>
+    </el-row>
+
+    <el-row justify="center">
+      <el-col>
+        <el-row justify="center" :gutter="20">
+          <el-col :span="7">
+            <div class="demo-image">
+              <div class="block">
+                <el-skeleton
+                style="width: 100%"
+                :loading="inputLoading"
+                animated
+                :throttle="1000"
+                >
+                  <template #template>
+                    <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
+                  </template>
+                  <template #default>
+                    <el-image :src="inputImagePath" fit="scale-down"/>
+                  </template>
+                </el-skeleton>
+                <span class="demonstration">input: {{ inputImagePath }}</span>
+              </div>
             </div>
-          </div>
-        </el-col>
-        <el-col :lg="10" :xl="6">
-          <div class="demo-image">
-            <div class="block">
-              <el-skeleton
-              style="width: 100%"
-              :loading="outputLoading"
-              animated
-              :throttle="1000"
-              >
-                <template #template>
-                  <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                </template>
-                <template #default>
-                  <el-image :src="outputImagePath" fit="scale-down"/>
-                </template>
-              </el-skeleton>
-              <span class="demonstration">output: {{ outputImagePath }}</span>
+          </el-col>
+          <el-col :span="7">
+            <div class="demo-image">
+              <div class="block">
+                <el-skeleton
+                style="width: 100%"
+                :loading="outputLoading"
+                animated
+                :throttle="1000"
+                >
+                  <template #template>
+                    <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
+                  </template>
+                  <template #default>
+                    <el-image :src="outputImagePath" fit="scale-down"/>
+                  </template>
+                </el-skeleton>
+                <span class="demonstration">output: {{ outputImagePath }}</span>
+              </div>
             </div>
-          </div>
-        </el-col>
-      </el-row>
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
-    <div class="slider-demo-block">
-      <el-slider v-model="sliderValue" :min="minValue" :max="maxValue" @input="handleChange"/>
-    </div>
-    </el-col>
-  </el-row>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+
+    <el-row justify="center">
+      <el-col :span="14">
+        <div class="slider-demo-block">
+          <el-slider v-model="sliderValue" :min="minValue" :max="maxValue" @input="handleChange"/>
+        </div>
+      </el-col>
+    </el-row>
+
   </div>
 </template>
 
@@ -140,6 +145,7 @@ export default {
 .demo-image .demonstration {
   display: block;
   color: var(--el-text-color-secondary);
+  word-wrap: break-word;
 }
 
 </style>

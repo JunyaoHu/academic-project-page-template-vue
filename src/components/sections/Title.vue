@@ -3,7 +3,6 @@
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 import 'element-plus/es/components/icon/style/css'
-import { disconnect } from 'echarts';
 
 // 标题
 const title = 'Academic Project Page Template'
@@ -18,25 +17,25 @@ const title_supp = ' (Vue based)'
 const title_supp_color = '#42B883'
 
 // 按钮颜色
-const btn_color = '#7e0c6d'
+const btn_color = '#444444'
 
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
     name: "Your Name",
-    icon: "https://junyaohu.github.io/img/avatar.png",
+    icon: "/icon/junyaohu.jpg",
     homepage: "https://junyaohu.github.io/",
     address_flag: "1,#"
   },
   {
     name: "Anya Forger",
-    icon: "http://img.92fa.com/pic/TX1439_01.jpg",
+    icon: "/icon/anya.jpg",
     homepage: "https://www.bilibili.com/video/BV1jv4y1P7Bb",
     address_flag: "2,#"
   },
   {
     name: "BugCat Capoo",
-    icon: "https://img.moegirl.org.cn/common/0/01/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2.jpg",
+    icon: "/icon/capoo.webp",
     homepage: "https://zh.moegirl.org.cn/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2",
     address_flag: "1,*"
   },
@@ -47,27 +46,26 @@ const addresses = [
   {
     address_flag: "1",
     name: "Home University",
-    icon: "https://avatars.githubusercontent.com/u/85953864?s=200&v=4",
+    icon: "/icon/home.png",
     homepage: "https://github.com/hmuniversity"
   },
   {
     address_flag: "2",
     name: "IKUN University",
-    icon: "https://gw.alicdn.com/imgextra/O1CN01S1PoyX1IZuTHAfhNs_!!6000000000908-2-yinhe.png",
+    icon: "/icon/ikun.avif",
     homepage: "https://www.bilibili.com/video/BV178411Y7QB"
   },
 ]
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "# = Equal Contribution. * = Corresponding Author."
-
+  "#: Equal Contribution. *: Corresponding Author."
 
 // 强调内容
 const emphases = [
-  "[ABCD 2024] Poster",
-  "This template project is still under development.",
-  "Welcome any suggestion. 🥰",
+  "🎉 [ABCD 2024] Poster",
+  "🔥 This template project is still under development.",
+  "🥰 Welcome any suggestion.",
 ]
 
 // 提供引导资料链接
@@ -160,20 +158,25 @@ const buttons = [
     </el-row>
 
     <!-- 提供引导按钮 -->
-    <el-row :span="10" justify="center">
-      <a :href=button.link v-for="button in buttons">
-        <el-button class="guidance-button" size="large" :color="btn_color" :disabled="button.disabled">
-          <el-icon :size="22">
-            <component :is="button.component" />
-          </el-icon>
-          <span class="btn-text">{{ button.name }}</span>
-        </el-button>
-      </a>
+    <el-row justify="center" style="margin-bottom: 20px;">
+      <el-col :span="20">
+        <el-row justify="center">
+          <a :href=button.link v-for="button in buttons">
+            <el-button class="guidance-button" size="large" :color="btn_color" :disabled="button.disabled" round>
+              <el-icon :size="22">
+                <component :is="button.component" />
+              </el-icon>
+              <span class="btn-text">{{ button.name }}</span>
+            </el-button>
+          </a>
+        </el-row>
+      </el-col>
     </el-row>
+
   </div>
 </template>
 
-<style>
+<style scoped>
 
 /* 文章标题字体、字间距、居中排布、字号 */
 .paper-title {
@@ -183,38 +186,52 @@ const buttons = [
   text-align: center;
 }
 
+/* 姓名和地址按钮 */
 .title-button {
   margin: 10px 3px;
 }
 
-.guidance-button {
-  margin: 10px 6px;
+/* 姓名和地址按钮光标悬浮 */
+.title-button:hover {
+  margin: 10px 8px;
 }
 
+/* 引导材料按钮 */
+.guidance-button {
+  margin: 10px 6px;
+  box-shadow: #d8d8d8 1px 1px 1px 1px;
+}
+
+/* 姓名属性 */
 .author {
   font-size: 18px;
   margin-left: 3px;
 }
 
+/* 姓名上标属性 */
 .name_sup {
   color: #606266; 
   margin-left: 3px;
 }
 
+/* 地址属性 */
 .address {
-  font-size: 14px;
+  font-size: 18px;
 }
 
+/* 地址上标属性 */
 .address_sup {
   color: #606266; 
   margin-right: 1px;
 }
 
+/* 头像属性 */
 .el-avatar {
   margin-right: 6px;
-  box-shadow: var(--el-box-shadow-lighter); 
+  box-shadow: #b7b7b7 0px 0px 3px 1px;
 }
 
+/* 共一和通讯文字属性 */
 .con-cor {
   font-family: Arial;
   font-size: 14px;
@@ -222,6 +239,7 @@ const buttons = [
   text-align: center;
 }
 
+/* 强调信息属性 */
 .emphasis {
   color: chocolate;
   font-weight: bold;
@@ -230,8 +248,10 @@ const buttons = [
   text-align: center;
 }
 
+/* 引导材料按钮文字属性 */
 .btn-text {
   font-size: 20px;
+  color: #ffffff;
 }
 
 </style>

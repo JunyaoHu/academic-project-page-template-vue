@@ -11,7 +11,7 @@ twikoo.init({
 <!-- <template>
   <div>
     <el-row>
-      <h1 class="title1">Comment</h1>
+      <h1 class="section-title">Comment</h1>
     </el-row>
     <el-row>
       <el-col class='bibtex' :span="20">

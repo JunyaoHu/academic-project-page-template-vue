@@ -67,68 +67,78 @@ export default {
 </script>
 
 <template>
-  <div class="bg">
-    <el-row>
-      <h1 class="title1">Comparison</h1>
+  <div>
+    <el-divider />
+
+    <el-row justify="center">
+      <h1 class="section-title">Comparison</h1>
     </el-row>
-    <el-row>
-    <el-col>
-      <el-row justify="space-evenly">
-        <el-col :sm="10" :lg="6">
-          <div class="demo-image">
-            <div class="block">
-              <el-skeleton
-              style="width: 100%"
-              :loading="comparison1Loading"
-              animated
-              :throttle="1000"
-              >
-                <template #template>
-                  <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                </template>
-                <template #default>
-                  <el-image :src="comparison1ImageRootPath" style="width: 100%; height: 100%" fit="scale-down"/>
-                </template>
-              </el-skeleton>
-              <span class="demonstration">input: {{ comparison1ImageRootPath }}</span>
+
+    <el-row justify="center">
+      <el-col >
+        <el-row justify="center" :gutter="20">
+
+          <el-col :span="7">
+
+            <div class="demo-image">
+              <div class="block">
+                <el-skeleton
+                style="width: 100%"
+                :loading="comparison1Loading"
+                animated
+                :throttle="1000"
+                >
+                  <template #template>
+                    <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
+                  </template>
+                  <template #default>
+                    <el-image :src="comparison1ImageRootPath" style="width: 100%; height: 100%" fit="scale-down"/>
+                  </template>
+                </el-skeleton>
+                <span class="demonstration">input: {{ comparison1ImageRootPath }}</span>
+              </div>
             </div>
-          </div>
-          <el-row>
-              <el-select
-                class="select"
-                v-model="value1"
-                placeholder="Select"
-                size="large"
-                @change="handleChange1"
-              >
-                <el-option
-                  v-for="item in options"
-                  :key="item"
-                  :label="item"
-                  :value="item"/>
-              </el-select>
-          </el-row>
-        </el-col>
-        <el-col :sm="10" :lg="6">
-          <div class="demo-image">
-            <div class="block">
-              <el-skeleton
-              style="width: 100%"
-              :loading="comparison2Loading"
-              animated
-              :throttle="1000"
-              >
-                <template #template>
-                  <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                </template>
-                <template #default>
-                  <el-image :src="comparison2ImageRootPath" style="width: 100%; height: 100%" fit="scale-down"/>
-                </template>
-              </el-skeleton>
-              <span class="demonstration">input: {{ comparison2ImageRootPath }}</span>
+
+            <el-row justify="center">
+                <el-select
+                  class="select"
+                  v-model="value1"
+                  placeholder="Select"
+                  size="large"
+                  @change="handleChange1"
+                >
+                  <el-option
+                    v-for="item in options"
+                    :key="item"
+                    :label="item"
+                    :value="item"/>
+                </el-select>
+            </el-row>
+
+          </el-col>
+
+          <el-col :span="7">
+            
+            <div class="demo-image">
+              <div class="block">
+                <el-skeleton
+                style="width: 100%"
+                :loading="comparison2Loading"
+                animated
+                :throttle="1000"
+                >
+                  <template #template>
+                    <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
+                  </template>
+                  <template #default>
+                    <el-image :src="comparison2ImageRootPath" style="width: 100%; height: 100%" fit="scale-down"/>
+                  </template>
+                </el-skeleton>
+                <span class="demonstration">input: {{ comparison2ImageRootPath }}</span>
+              </div>
             </div>
-          </div>
-          <el-row>
+
+            <el-row justify="center">
               <el-select
                 class="select"
                 v-model="value2"
@@ -142,31 +152,21 @@ export default {
                   :label="item"
                   :value="item"/>
               </el-select>
-          </el-row>
-        </el-col>
-      </el-row>
-    </el-col>
-  </el-row>
+            </el-row>
+          </el-col>
+
+        </el-row>
+      </el-col>
+    </el-row>
+
   </div>
 </template>
 
-<style>
+<style scoped>
 
 .select {
   padding-top: 10px;
   width: 200px;
-}
-
-.title1 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 0px;
-}
-
-.bg {
-  background-color: rgb(235, 235, 235);
 }
 
 .demo-image .block {
@@ -187,6 +187,7 @@ export default {
   padding-top: 10px;
   display: block;
   color: var(--el-text-color-secondary);
+  word-wrap: break-word;
 }
 
 </style>

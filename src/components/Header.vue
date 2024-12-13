@@ -90,7 +90,7 @@ const more_paper = {
 /* 导航背景特效和阴影 */
 .el-affix--fixed {
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-	background-image: radial-gradient(#ffffffdb 1px,#ffffff 1px);
+	background-image: radial-gradient(#ffffffca 1px,#ffffff 1px);
 	background-size: 3px 3px;
 }
 
