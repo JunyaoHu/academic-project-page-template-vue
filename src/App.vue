@@ -12,17 +12,19 @@ export default {
     Footer,
   }
 }
+
 </script>
 
 <template>
-  <div class="common-layout">
-    
+  <!-- <div class="common-layout"> -->
+  <div>
     <el-container>
       <el-header><Header/></el-header>
       <el-main><Main/></el-main>
       <el-footer><Footer/></el-footer>
     </el-container>
 
+    <!-- 回到顶部 -->
     <el-backtop :right="40" :bottom="40" />
   </div>
 </template>
@@ -30,6 +32,9 @@ export default {
 <style>
 .el-header {
   padding: 0px;
-  height: 60px;
+}
+
+.el-footer {
+  padding: 0px;
 }
 </style>

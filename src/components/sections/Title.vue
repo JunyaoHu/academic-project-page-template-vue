@@ -1,187 +1,213 @@
-<script>
-export default {
-  data() {
-    return {
-      title: 'Academic Project Page Template',
-      color_title: '(Vue based)',
-      title_color: '#42B883',
-      authors: [
-        {
-          name: "Junyao Hu",
-          icon: "https://junyaohu.github.io/img/avatar.png",
-          homepage: "https://junyaohu.github.io/",
-          address_flag: "1"
-        },
-        {
-          name: "Another author",
-          icon: "https://junyaohu.github.io/img/avatar.png",
-          homepage: "https://junyaohu.github.io/",
-          address_flag: "2"
-        },
-        {
-          name: "Your Tutor",
-          icon: "https://junyaohu.github.io/img/avatar.png",
-          homepage: "https://junyaohu.github.io/",
-          address_flag: "1"
-        },
-      ],
-      addresses: [
-        {
-          address_flag: "1",
-          name: "Nankai University",
-          icon: "https://www.nankai.edu.cn/_upload/article/images/77/1f/a7852bfa49c3bdea0f4564630e66/c658ec37-5315-4c7c-b5d5-aee3e3e570d3.jpg",
-          homepage: "https://cv.nankai.edu.cn/"
-        },
-        {
-          address_flag: "2",
-          name: "Another University",
-          icon: "https://www.nankai.edu.cn/_upload/article/images/77/1f/a7852bfa49c3bdea0f4564630e66/c658ec37-5315-4c7c-b5d5-aee3e3e570d3.jpg",
-          homepage: "https://cv.nankai.edu.cn/"
-        },
-      ],
-      emphases: [
-        "This template project is still under development.",
-        "Welcome any suggestion. 🥰",
-      ],
-      buttons: [
-        {
-          disabled: false,
-          name: "Paper",
-          link: "https://junyaohu.github.io/",
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/></svg>'
-        },
-        {
-          disabled: true,
-          name: "Demo (soon)",
-          link: "#",
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z"/></svg>'
-        },
-        {
-          disabled: true,
-          name: "Video (soon)",
-          link: "#",
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 32H361.9l-1 1-127 127h92.1l1-1L453.8 32.3c-1.9-.2-3.8-.3-5.8-.3zm64 128V96c0-15.1-5.3-29.1-14-40l-104 104H512zM294.1 32H201.9l-1 1L73.9 160h92.1l1-1 127-127zM64 32C28.7 32 0 60.7 0 96v64H6.1l1-1 127-127H64zM512 192H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192z"/></svg>'
-        },
-        {
-          disabled: true,
-          name: "Code (soon)",
-          link: "#",
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM265 255l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>'
-        },
-      ],
-    }
-  }
-}
+<script lang="ts" setup>
+
+import { ElIcon } from 'element-plus'
+import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
+import 'element-plus/es/components/icon/style/css'
+import { disconnect } from 'echarts';
+
+// 标题
+const title = 'Academic Project Page Template'
+
+// 标题颜色
+const title_color = '#000000'
+
+// 标题补充，没有则置为""即可
+const title_supp = ' (Vue based)'
+
+// 标题补充颜色
+const title_supp_color = '#42B883'
+
+// 按钮颜色
+const btn_color = '#7e0c6d'
+
+// 作者清单（包含作者姓名、头像、主页、地址序号）
+const authors = [
+  {
+    name: "Your Name",
+    icon: "https://junyaohu.github.io/img/avatar.png",
+    homepage: "https://junyaohu.github.io/",
+    address_flag: "1,#"
+  },
+  {
+    name: "Anya Forger",
+    icon: "http://img.92fa.com/pic/TX1439_01.jpg",
+    homepage: "https://www.bilibili.com/video/BV1jv4y1P7Bb",
+    address_flag: "2,#"
+  },
+  {
+    name: "BugCat Capoo",
+    icon: "https://img.moegirl.org.cn/common/0/01/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2.jpg",
+    homepage: "https://zh.moegirl.org.cn/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2",
+    address_flag: "1,*"
+  },
+]
+
+// 地址清单（包含地址名称、头像、主页、地址序号）
+const addresses = [
+  {
+    address_flag: "1",
+    name: "Home University",
+    icon: "https://avatars.githubusercontent.com/u/85953864?s=200&v=4",
+    homepage: "https://github.com/hmuniversity"
+  },
+  {
+    address_flag: "2",
+    name: "IKUN University",
+    icon: "https://gw.alicdn.com/imgextra/O1CN01S1PoyX1IZuTHAfhNs_!!6000000000908-2-yinhe.png",
+    homepage: "https://www.bilibili.com/video/BV178411Y7QB"
+  },
+]
+
+// 共一和通讯提示
+const con_and_corresponding_author = 
+  "# = Equal Contribution. * = Corresponding Author."
+
+
+// 强调内容
+const emphases = [
+  "[ABCD 2024] Poster",
+  "This template project is still under development.",
+  "Welcome any suggestion. 🥰",
+]
+
+// 提供引导资料链接
+const buttons = [
+  {
+    disabled: false,
+    name: "Paper",
+    link: "https://junyaohu.github.io/",
+    component: Document,
+  },
+  {
+    disabled: true,
+    name: "中译版",
+    component: Document,
+  },
+  {
+    disabled: true,
+    name: "Code",
+    component: Files,
+  },
+  {
+    disabled: true,
+    name: "Demo",
+    component: MagicStick,
+  },
+  {
+    disabled: true,
+    name: "Poster",
+    component: Picture,
+  },
+  {
+    disabled: true,
+    name: "Slide",
+    component: DataAnalysis,
+  },
+  {
+    disabled: true,
+    name: "Video",
+    component: Film,
+  },
+]
+
 </script>
 
 <template>
   <div>
-    <el-row>
-      <el-col :span="22">
-        <h1 class="title0">
-          {{ title }}
-          <span v-if="color_title" :style="{color:title_color}"> {{ color_title }}</span>
+
+    <!-- 文章标题 -->
+    <el-row justify="center">
+      <el-col :span="20">
+        <h1 class="paper-title">
+          <span v-if="title" :style="{color:title_color}"> {{ title }}</span>
+          <span v-if="title_supp" :style="{color:title_supp_color}"> {{ title_supp }}</span>
         </h1>
       </el-col>
     </el-row>
 
-    <el-row>
-      <span v-for="author in authors">
-        <a :href=author.homepage class="btn_link">
-          <el-button class="title-button" type="primary" text>
-            <el-avatar v-if="author.icon" class="author-icon" :size="40" :src="author.icon" />
-            <span class="author">
-              {{ author.name }}<sup v-if="author.address_flag" style="color: #606266">{{ author.address_flag }}</sup>
-            </span>
-          </el-button>
-        </a>
-      </span>
+    <!-- 作者名单 -->
+    <el-row justify="center">
+      <a :href=author.homepage v-for="author in authors">
+        <el-button class="title-button" type="primary" text>
+          <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
+          <span class="author">
+            {{ author.name }}<sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
+          </span>
+        </el-button>
+      </a>
     </el-row>
 
-    <el-row>
-      <span v-for="address in addresses">
-        <a :href=address.homepage class="btn_link">
-          <el-button class="title-button"  type="" text>
-            <el-avatar v-if="address.icon" class="author-icon" :size="40" :src="address.icon" />
-            <span class="address">
-              <sup v-if="address.address_flag" style="color: #606266">{{ address.address_flag }}</sup>{{ address.name }}
-            </span>
-          </el-button>
-        </a>
-      </span>
+    <!-- 地址名单 -->
+    <el-row justify="center">
+      <a :href=address.homepage v-for="address in addresses">
+        <el-button class="title-button" type="primary" text>
+          <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
+          <span class="address">
+            <sup v-if="address.address_flag" class="address_sup">{{ address.address_flag }}</sup>{{ address.name }}
+          </span>
+        </el-button>
+      </a>
     </el-row>
 
-    <el-row class="emphasis" v-for="emphasis in emphases">
+    <!-- 共一和通讯提示内容 -->
+    <el-row justify="center" class="con-cor">
+        {{ con_and_corresponding_author }}
+    </el-row>
+
+    <!-- 强调内容 -->
+    <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
         {{ emphasis }}
     </el-row>
 
-    <el-row justify="center">
-      <span class="btn" v-for="button in buttons">
-        <a :href=button.link class="btn_link">
-          <el-button class="btn_font" size="large" color="#7e0c6d" :disabled="button.disabled">
-            <span class="btn_icon" v-html="button.svg"></span>
-            <span>{{ button.name }}</span>
-          </el-button>
-        </a>
-      </span>
+    <!-- 提供引导按钮 -->
+    <el-row :span="10" justify="center">
+      <a :href=button.link v-for="button in buttons">
+        <el-button class="guidance-button" size="large" :color="btn_color" :disabled="button.disabled">
+          <el-icon :size="22">
+            <component :is="button.component" />
+          </el-icon>
+          <span class="btn-text">{{ button.name }}</span>
+        </el-button>
+      </a>
     </el-row>
   </div>
 </template>
 
 <style>
 
-.el-row {
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-a.btn_link {
-  color: hsl(204, 86%, 53%);
-  text-decoration: none;
-}
-
-.btn {
-  margin: 4px 5px;
-}
-
-.emphasis {
-  color: chocolate;
-  font-weight: bold;
-  margin: 15px;
-  font-size: 22px;
-  text-align: center;
-}
-
-.btn_icon {
-  margin-right: 8px;
-  display: flex;
-}
-
-.btn_font {
-  font-size: 18px;
-}
-
-.title0 {
+/* 文章标题字体、字间距、居中排布、字号 */
+.paper-title {
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 42px;
   text-align: center;
 }
 
+.title-button {
+  margin: 10px 3px;
+}
+
+.guidance-button {
+  margin: 10px 6px;
+}
+
 .author {
-  font-size: 20px;
+  font-size: 18px;
+  margin-left: 3px;
+}
+
+.name_sup {
+  color: #606266; 
+  margin-left: 3px;
 }
 
 .address {
-  font-size: 20px;
+  font-size: 14px;
 }
 
-.el-button .btn_icon {
-  fill:#ebebeb;
-}
-
-.title-button {
-  height: auto;
+.address_sup {
+  color: #606266; 
+  margin-right: 1px;
 }
 
 .el-avatar {
@@ -189,8 +215,23 @@ a.btn_link {
   box-shadow: var(--el-box-shadow-lighter); 
 }
 
-.el-avatar:hover {
-  border: 1px solid #409EFF;
+.con-cor {
+  font-family: Arial;
+  font-size: 14px;
+  margin: 18px 0px;
+  text-align: center;
+}
+
+.emphasis {
+  color: chocolate;
+  font-weight: bold;
+  margin: 8px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.btn-text {
+  font-size: 20px;
 }
 
 </style>

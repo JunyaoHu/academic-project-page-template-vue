@@ -26,12 +26,12 @@ export default {
 
 <template>
     <Title/>
-    <Video/>
-    <Carousel/>
-    <Abstract/>
-    <Echart/>
-    <SeletionForComparison/>
-    <ImageSlider/>
-    <BibTeX/>
+    <!-- <Video/> -->
+    <!-- <Carousel/> -->
+    <!-- <Abstract/> -->
+    <!-- <Echart/> -->
+    <!-- <SeletionForComparison/> -->
+    <!-- <ImageSlider/> -->
+    <!-- <BibTeX/> -->
     <!-- <Comment/> -->
 </template>
