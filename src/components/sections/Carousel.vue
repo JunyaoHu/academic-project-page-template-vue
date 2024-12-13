@@ -13,12 +13,12 @@ export default {
     },
   data() {
     return {
-        modules: [
-          Navigation,
-          Pagination,
-          Autoplay,
-        ],
-        image_paths: [
+      modules: [
+        Navigation,
+        Pagination,
+        Autoplay,
+      ],
+      image_paths: [
         "./carousel/1.jpg",
         "./carousel/2.jpg",
         "./carousel/3.jpg",
@@ -32,45 +32,47 @@ export default {
 </script>
 
 <template>
-  <div>
-    <el-row>
-      <el-col :lg="24" :xl="16">
-        <swiper
-          :loop="true"
-          :slidesPerView="1"
-          :breakpoints="{
-            600: {
-              slidesPerView: 2,
-            },
-            800: {
-              slidesPerView: 3,
-            },
-          }"
-          :modules="modules"
-          :navigation="{ }"
-          :pagination="{ 
-            clickable:true, 
-            type:'bullets' 
-          }"
-          :autoplay="{ 
-            delay:5000,
-            disableOnInteraction:false,
-            pauseOnMouseEnter:true,
-          }"
-          >
-          <swiper-slide v-for="path in image_paths">
-            <el-image :src="path"/>
-          </swiper-slide>
-        </swiper>
-      </el-col>
-    </el-row>
-  </div>
+  <el-row justify="center">
+    <el-col :span="24">
+      <swiper
+        :loop="true"
+        :slidesPerView="1"
+        :breakpoints="{
+          600: {
+            slidesPerView: 2,
+          },
+          800: {
+            slidesPerView: 3,
+          },
+        }"
+        :modules="modules"
+        :navigation="{ 
+          hideOnClick:true,
+        }"
+        :pagination="{ 
+          hideOnClick:true,
+          clickable:true, 
+          type:'bullets' 
+        }"
+        :autoplay="{ 
+          delay:5000,
+          disableOnInteraction:false,
+          pauseOnMouseEnter:true,
+        }"
+        >
+        <swiper-slide v-for="path in image_paths">
+          <el-image :src="path"/>
+        </swiper-slide>
+      </swiper>
+    </el-col>
+  </el-row>
 </template>
   
 <style>
 
+/* 设置Swiper风格 */
 .swiper {
-  --swiper-theme-color: white;/* 设置Swiper风格 */
+  --swiper-theme-color: white;
 }
 
 </style>

@@ -25,13 +25,14 @@ export default {
 </script>
 
 <template>
-    <Title/>
-    <Video/>
-    <Carousel/>
-    <Abstract/>
-    <Echart/>
-    <SeletionForComparison/>
-    <ImageSlider/>
-    <BibTeX/>
-    <!-- <Comment/> -->
+  <Title/>
+  <Carousel/>
+  <Video/>
+  <Abstract/>
+  <Echart/>
+  <SeletionForComparison/>
+  <ImageSlider/>
+  <BibTeX/>
+  <!-- <Comment/> -->
+
 </template>

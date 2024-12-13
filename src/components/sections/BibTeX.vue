@@ -31,46 +31,49 @@ export default {
 
 <template>
   <div>
-    
-    <el-row>
-      <h1 class="title1">BibTeX</h1>
-    </el-row>
-
-    <el-row>
-      <el-col class='bibtex' :xs="20" :sm="20" :md="14" :lg="12" :xl="12">
-        <el-scrollbar style="margin: 10px 20px 5px 20px;" @click="copyVal()">
-          <div style="text-align: center; color: var(--el-text-color-secondary);">Click here to copy BibTex.</div> 
-          <pre><code v-for="b in bibtex" class="code">{{ b }}<br/></code></pre>
-        </el-scrollbar>
-      </el-col>
-    </el-row>
+    <el-divider />
+      
+      <el-row justify="center">
+        <h1 class="section-title">BibTeX</h1>
+      </el-row>
+      
+      <el-row justify="center">
+        <el-col class='bibtex' :xs="20" :sm="20" :md="14" :lg="12" :xl="12">
+          <el-scrollbar style="margin: 10px 20px 5px 20px;" @click="copyVal()" >
+            <div style="text-align: center; color: var(--el-text-color-secondary);">🖱️ Click this area to copy BibTex.</div> 
+            <pre><code v-for="b in bibtex" class="code">{{ b }}<br/></code></pre>
+          </el-scrollbar>
+        </el-col>
+      </el-row>
 
   </div>
 </template>
 
 <style scoped>
 
-.title1 {
-  margin-bottom: 10px;
-}
-
 .scrollbar-flex-content {
   display: flex;
 }
 
+/* 代码属性 */
 .code {
   font-family: Consolas, monospace;
 }
 
+/* 卡片属性 */
 .bibtex {
+  margin: 20px 0px;
+  padding-top: 5px;
   box-shadow: var(--el-box-shadow-light); 
   border-radius: 10px;
 }
 
+/* 卡片悬浮 */
 .bibtex:hover {
   box-shadow: var(--el-box-shadow); 
 }
 
+/* 卡片点击 */
 .bibtex:active{
   box-shadow: var(--el-box-shadow-lighter); 
 }

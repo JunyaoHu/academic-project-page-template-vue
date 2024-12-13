@@ -73,10 +73,13 @@ export default {
 
 <template>
   <div>
-    <el-row>
-      <h1 class="title1">Quantitative Results</h1>
+    <el-divider />
+
+    <el-row justify="center">
+      <h1 class="section-title">Quantitative Results</h1>
     </el-row>
-    <el-row>
+
+    <el-row justify="center">
       <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
         <v-chart class="chart" :option="option" autoresize />
       </el-col>
@@ -88,5 +91,6 @@ export default {
 <style scoped>
 .chart {
   height: 320px;
+  margin-top: 20px;
 }
 </style>

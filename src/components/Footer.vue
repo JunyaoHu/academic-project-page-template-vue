@@ -1,44 +1,59 @@
-<script>
-
-export default {
-  data() {
-    return {
-      text:" The template is borrowed from Nerfies"
-    }
-  }
+<script lang="ts" setup>
+// 页脚需要的链接
+const links = {
+    Nerfies: "https://github.com/nerfies/nerfies.github.io",
+    Vue: "https://cn.vuejs.org/",
+    Vite: "https://cn.vitejs.dev/",
+    ElementPlus: "https://element-plus.org/zh-CN/",
+    template: "https://junyaohu.github.io/template/",
 }
 </script>
 
 <template>
+  
   <div class="bg">
-    <el-row>
-      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
-          <p class="footer">
-            The template is inspired by <a class="footer_link" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, powered by <a class="footer_link" href="https://vuejs.org/">Vue</a>.<br/>
-            You can fork🛠️ / star✨/ PR📃 this template<br/>
-            from <a class="footer_link" href="https://github.com/JunyaoHu/academic-project-page-template-vue">Academic Project Page Template Vue</a>.
-          </p>
-      </el-col>
-    </el-row>
+    
+    <el-watermark :content="['JunyaoHu', 'Academic Project', 'Page Template']" :gap="['60','0']" :z-index="0">
+      <el-row justify="center">
+        <p class="footer">
+          This template is inspired by 
+          <a :href="links.Nerfies">Nerfies</a>,<br/>
+          
+          powered by 
+          <a :href="links.Vue">Vue</a>, 
+          <a :href="links.Vite">Vite</a>, and
+          <a :href="links.ElementPlus">Element Plus</a>.<br/>
+          
+          You can fork🛠️ / star✨/ PR📃 from <a :href="links.template">here</a>.
+        </p>
+      </el-row>
+    </el-watermark>
   </div>
 </template>
 
 <style scoped>
+
+/* 页脚背景 */
 .bg {
   background-color: rgb(235, 235, 235);
 }
 
+/* 页脚文字 */
 .footer {
   text-align: center;
+  margin: 20px;
+  z-index: 1;
 }
 
-a.footer_link {
+/* 链接颜色装饰 */
+a {
   color: #3273dc;
   text-decoration: none;
 }
 
-a.footer_link:hover {
-  color: #363636;
+/* 鼠标焦点悬浮在链接上的颜色装饰 */
+a:hover {
+  color: #848484;
   border-bottom: dotted;
 }
 
