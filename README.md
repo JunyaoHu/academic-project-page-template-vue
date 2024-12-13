@@ -2,6 +2,8 @@
 
 - **This project is in development, and welcome any suggestions.**
 
+![preview](https://github.com/user-attachments/assets/fc823753-8100-4f42-8cd9-f6220c32d580)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
