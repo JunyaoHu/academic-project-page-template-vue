@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base:'/template',
+  base:'/academic-project-page-template-vue',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
