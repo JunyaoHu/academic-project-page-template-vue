@@ -33,6 +33,6 @@ export default {
   <SeletionForComparison/>
   <ImageSlider/>
   <BibTeX/>
-  <Comment/>
+  <!-- <Comment/> -->
 
 </template>

@@ -10,7 +10,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "echarts": "^5.4.3",
-    "element-plus": "^2.3.8",
+    "element-plus": "^2.9.1",
     "swiper": "^10.3.1",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.8"
