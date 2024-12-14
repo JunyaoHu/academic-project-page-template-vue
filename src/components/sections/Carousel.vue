@@ -18,6 +18,7 @@ export default {
         Pagination,
         Autoplay,
       ],
+      // 选择要轮播的照片
       image_paths: [
         "./carousel/1.jpg",
         "./carousel/2.jpg",
@@ -34,6 +35,7 @@ export default {
 <template>
   <el-row justify="center">
     <el-col :span="24">
+      <!-- 设置轮播图：循环播放、首张图序号、响应式、导航和分页、自动播放 -->
       <swiper
         :loop="true"
         :slidesPerView="1"

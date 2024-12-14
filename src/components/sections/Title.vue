@@ -2,7 +2,6 @@
 
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
-import 'element-plus/es/components/icon/style/css'
 
 // 标题
 const title = 'Academic Project Page Template'
@@ -200,6 +199,7 @@ const buttons = [
 .guidance-button {
   margin: 10px 6px;
   box-shadow: #d8d8d8 1px 1px 1px 1px;
+  /* padding: 12px 19px; */
 }
 
 /* 姓名属性 */

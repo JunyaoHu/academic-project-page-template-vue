@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 @media screen{
 iframe {
     position: center;

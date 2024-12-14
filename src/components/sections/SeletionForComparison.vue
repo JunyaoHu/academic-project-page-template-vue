@@ -169,6 +169,7 @@ export default {
   width: 200px;
 }
 
+/* 路径文字居中 */
 .demo-image .block {
   padding: 20px 0 0 0;
   text-align: center;
@@ -183,6 +184,7 @@ export default {
   border-right: none;
 }
 
+/* 路径文字颜色 */
 .demo-image .demonstration {
   padding-top: 10px;
   display: block;

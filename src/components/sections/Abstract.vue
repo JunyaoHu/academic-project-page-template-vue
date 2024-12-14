@@ -25,8 +25,9 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 
+/* 摘要文字居中 */
 p {
   text-align: justify;
 } 
