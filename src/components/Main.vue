@@ -26,13 +26,13 @@ export default {
 
 <template>
   <Title/>
-  <!-- <Carousel/>
+  <Carousel/>
   <Video/>
   <Abstract/>
   <Echart/>
   <SeletionForComparison/>
   <ImageSlider/>
   <BibTeX/>
-  <Comment/> -->
+  <Comment/>
 
 </template>
