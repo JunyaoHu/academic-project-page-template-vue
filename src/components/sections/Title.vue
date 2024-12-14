@@ -200,6 +200,7 @@ const buttons = [
 .guidance-button {
   margin: 10px 6px;
   box-shadow: #d8d8d8 1px 1px 1px 1px;
+  padding: 12px 19px;
 }
 
 /* 姓名属性 */

@@ -43,7 +43,7 @@ export default {
     
     <el-row justify="center">
       <el-col :span="18" >
-        <!-- <div id="twikoo"></div> -->
+        <div id="twikoo"></div>
       </el-col>
     </el-row>
   </div>
