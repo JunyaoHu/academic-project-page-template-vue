@@ -7,7 +7,7 @@ import Video from './sections/Video.vue'
 import ImageSlider from './sections/ImageSlider.vue'
 import Echart from './sections/Echart.vue'
 import SeletionForComparison from './sections/SeletionForComparison.vue'
-// import Comment from './sections/Comment.vue'
+import Comment from './sections/Comment.vue'
 
 export default {
   components: {
@@ -18,8 +18,8 @@ export default {
     Video,
     ImageSlider,
     Echart,
-    SeletionForComparison
-    // Comment,
+    SeletionForComparison,
+    Comment,
   }
 }
 </script>
@@ -33,6 +33,6 @@ export default {
   <SeletionForComparison/>
   <ImageSlider/>
   <BibTeX/>
-  <!-- <Comment/> -->
+  <Comment/>
 
 </template>
