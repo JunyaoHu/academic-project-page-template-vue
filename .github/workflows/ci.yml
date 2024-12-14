@@ -5,6 +5,7 @@ on:
     push:
         branches:
             - main # 这里只配置了main分支，所以只有推送main分支才会触发以下任务
+            - new2
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
