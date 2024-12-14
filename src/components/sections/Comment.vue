@@ -56,8 +56,14 @@ export default {
   margin: 30px 0px;
 }
 
-/* 留言板位置 */
+/* 留言板链接属性 */
 #twikoo .tk-comments-container a {
+  text-decoration: none;
+  color: #3e98f2;
+}
+
+/* twikoo链接属性 */
+#twikoo .tk-footer a {
   text-decoration: none;
   color: #3e98f2;
 }
