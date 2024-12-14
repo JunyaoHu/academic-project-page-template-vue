@@ -7,43 +7,13 @@
 
 import { onMounted, onUnmounted } from 'vue';
 
-// .el-button {
-//   display: inline-block;
-//     line-height: 1;
-//     white-space: nowrap;
-//     cursor: pointer;
-//     background: #FFF;
-//     border: 1px solid #DCDFE6;
-//     color: #606266;
-//     -webkit-appearance: none;
-//     text-align: center;
-//     -webkit-box-sizing: border-box;
-//     box-sizing: border-box;
-//     outline: 0;
-//     margin: 0;
-//     -webkit-transition: .1s;
-//     transition: .1s;
-//     font-weight: 500;
-//     -moz-user-select: none;
-//     -webkit-user-select: none;
-//     -ms-user-select: none;
-//     padding: 12px 20px;
-//     font-size: 14px;
-//     border-radius: 4px;
-// }
 export default {
-  // 这个钩子函数会在组件挂载到 DOM 之后被自动调用，
-  // 非常适合用来初始化 Twikoo 评论插件。
-  // 在mounted函数内部，通过调用twikoo.init方法，
-  // 并传入相应的配置参数（如envId和el等，根据实际情况填写和配置可选参数）
-  // 来完成 Twikoo 的初始化工作，使其能够正确地在页面上展示评论框
-  // 并与后端环境交互（前提是后端环境已正确配置好对应的envId等相关设置）。
   setup() {
     onMounted(() => {
 
       const cdnScript = document.createElement('script');
       // 一个修改过后的的 twikoo js 版本，不然直接导入sdn的话和element原版内容的冲突
-      cdnScript.src = '/src/assets/twikoo/twikoo.junyaohu.js';
+      cdnScript.src = './twikoo/twikoo.junyaohu.js';
       // cdnScript.src = 'https://cdn.staticfile.org/twikoo/1.6.40/twikoo.all.min.js';
       cdnScript.async = true;
     
@@ -79,7 +49,7 @@ export default {
     </el-row>
     
     <el-row justify="center">
-      <el-col :span="18">
+      <el-col :span="16">
         <div id="twikoo"></div>
       </el-col>
     </el-row>
@@ -111,7 +81,7 @@ export default {
   border: 0.5px solid #bcbcbc;
   border-radius: 5px;
   padding: 10px;
-  background: #ebeeff;
+  background: #f4f5ff;
 }
 
 #twikoo code {
