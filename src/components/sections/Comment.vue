@@ -51,19 +51,38 @@ export default {
 
 <style>
 
+.tk-meta-input > div > div {
+  border: none;
+}
+
+.tk-meta-input > div > input {
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
 /* 留言板位置 */
 #twikoo {
   margin: 30px 0px;
 }
 
+.tk-meta a {
+  color: #000000;
+}
+
 /* 留言板链接属性 */
-#twikoo .tk-comments-container a {
+.tk-actions a {
+  text-decoration: none;
+  color: #3e98f2;
+}
+
+.tk-ruser {
   text-decoration: none;
   color: #3e98f2;
 }
 
 /* twikoo链接属性 */
-#twikoo .tk-footer a {
+.tk-footer a {
   text-decoration: none;
   color: #3e98f2;
 }

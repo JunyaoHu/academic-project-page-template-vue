@@ -31,16 +31,6 @@ export default {
 
 <style>
 
-.tk-meta-input > div > div {
-  border: none;
-}
-
-.tk-meta-input > div > input {
-  border: 1px solid #e2e2e2;
-  border-radius: 5px;
-  padding-left: 5px;
-}
-
 .section-title {
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
