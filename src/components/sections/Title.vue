@@ -127,7 +127,7 @@ const buttons = [
     <el-row justify="center">
       <a :href=author.homepage v-for="author in authors">
         <el-button class="title-button" type="primary" text>
-          <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
+          <el-avatar class="avatar" v-if="author.icon" :size="40" :src="author.icon" />
           <span class="author">
             {{ author.name }}<sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
           </span>
@@ -139,7 +139,7 @@ const buttons = [
     <el-row justify="center">
       <a :href=address.homepage v-for="address in addresses">
         <el-button class="title-button" type="primary" text>
-          <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
+          <el-avatar class="avatar" v-if="address.icon" :size="40" :src="address.icon" />
           <span class="address">
             <sup v-if="address.address_flag" class="address_sup">{{ address.address_flag }}</sup>{{ address.name }}
           </span>
@@ -176,7 +176,7 @@ const buttons = [
   </div>
 </template>
 
-<style scoped>
+<style>
 
 /* 文章标题字体、字间距、居中排布、字号 */
 .paper-title {
@@ -227,7 +227,7 @@ const buttons = [
 }
 
 /* 头像属性 */
-.el-avatar {
+.avatar {
   margin-right: 6px;
   box-shadow: #b7b7b7 0px 0px 3px 1px;
 }
