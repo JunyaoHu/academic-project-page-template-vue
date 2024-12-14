@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       option: {
+        // 使用echarts设置属性和数据
         title: {
             text: 'Traffic Sources',
             left: 'center',
@@ -79,6 +80,7 @@ export default {
       <h1 class="section-title">Quantitative Results</h1>
     </el-row>
 
+    <!-- echarts 图表 -->
     <el-row justify="center">
       <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
         <v-chart class="chart" :option="option" autoresize />
@@ -89,6 +91,7 @@ export default {
 </template>
 
 <style scoped>
+/* 图表属性 */
 .chart {
   height: 320px;
   margin-top: 20px;

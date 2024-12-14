@@ -17,6 +17,7 @@ export default {
       <h1 class="section-title">Abstract</h1>
     </el-row>
 
+    <!-- 摘要内容 -->
     <el-row justify="center">
       <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
         <p>{{ abstract }}</p>
@@ -25,8 +26,9 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 
+/* 摘要文字居中 */
 p {
   text-align: justify;
 } 

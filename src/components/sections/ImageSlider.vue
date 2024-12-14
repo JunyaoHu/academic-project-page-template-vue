@@ -67,39 +67,46 @@ export default {
           <el-col :span="7">
             <div class="demo-image">
               <div class="block">
+                <!-- 预加载骨架 -->
                 <el-skeleton
                 style="width: 100%"
                 :loading="inputLoading"
                 animated
-                :throttle="1000"
-                >
+                :throttle="1000">
+                  <!-- 骨架模板 -->
                   <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
                   </template>
+                  <!-- 实际显示图像内容 -->
                   <template #default>
                     <el-image :src="inputImagePath" fit="scale-down"/>
                   </template>
                 </el-skeleton>
+                <!-- 图片路径 -->
                 <span class="demonstration">input: {{ inputImagePath }}</span>
               </div>
             </div>
           </el-col>
+
           <el-col :span="7">
             <div class="demo-image">
               <div class="block">
+                <!-- 预加载骨架 -->
                 <el-skeleton
                 style="width: 100%"
                 :loading="outputLoading"
                 animated
-                :throttle="1000"
-                >
+                :throttle="1000">
+                  <!-- 骨架模板 -->
                   <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
                   </template>
+                  <!-- 实际显示图像内容 -->
                   <template #default>
                     <el-image :src="outputImagePath" fit="scale-down"/>
                   </template>
                 </el-skeleton>
+                <!-- 图片路径 -->
                 <span class="demonstration">output: {{ outputImagePath }}</span>
               </div>
             </div>
@@ -108,11 +115,10 @@ export default {
       </el-col>
     </el-row>
 
+    <!-- 滑块控制 -->
     <el-row justify="center">
       <el-col :span="14">
-        <div class="slider-demo-block">
           <el-slider v-model="sliderValue" :min="minValue" :max="maxValue" @input="handleChange"/>
-        </div>
       </el-col>
     </el-row>
 
@@ -120,16 +126,13 @@ export default {
 </template>
 
 <style scoped>
-.slider-demo-block {
-  display: flex;
-  align-items: center;
-}
-.slider-demo-block .el-slider {
-  margin-top: 0;
-  margin-left: 12px;
-  margin-bottom: 15px;
+
+/* 滑块 */
+.el-slider {
+  margin: 15px 0;
 }
 
+/* 路径文字居中 */
 .demo-image .block {
   padding: 20px 0 0 0;
   text-align: center;
@@ -139,18 +142,20 @@ export default {
   box-sizing: border-box;
   vertical-align: top;
 }
+
 .demo-image .block:last-child {
   border-right: none;
 }
+
+/* 路径文字颜色 */
 .demo-image .demonstration {
+  padding-top: 10px;
   display: block;
   color: var(--el-text-color-secondary);
   word-wrap: break-word;
 }
 
-</style>
-
-<style>
+/* 滑块背景颜色 */
 .el-slider__runway {
   background-color: #c6c6c6;
 }

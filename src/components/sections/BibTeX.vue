@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      // 在这里填写你的bibtex内容，按照下面格式，每行分开填入
       bibtex: [
         "@article{junyaohu2023template,",
         "    title={Academic Project Page Template Vue},",
@@ -37,6 +38,7 @@ export default {
         <h1 class="section-title">BibTeX</h1>
       </el-row>
       
+      <!-- bibtex卡片展示 -->
       <el-row justify="center">
         <el-col class='bibtex' :xs="20" :sm="20" :md="14" :lg="12" :xl="12">
           <el-scrollbar style="margin: 10px 20px 5px 20px;" @click="copyVal()" >
@@ -51,6 +53,7 @@ export default {
 
 <style scoped>
 
+/* 滚动条 */
 .scrollbar-flex-content {
   display: flex;
 }
