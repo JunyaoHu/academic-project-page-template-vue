@@ -2,7 +2,6 @@
 
 import { ElIcon } from 'element-plus'
 import { HomeFilled, SuccessFilled } from '@element-plus/icons-vue'
-import 'element-plus/es/components/icon/style/css'
 
 // 个人主页
 const home = {

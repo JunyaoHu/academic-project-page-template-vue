@@ -2,7 +2,6 @@
 
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
-import 'element-plus/es/components/icon/style/css'
 
 // 标题
 const title = 'Academic Project Page Template'
