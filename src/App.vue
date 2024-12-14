@@ -3,6 +3,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
+import { onMounted } from 'vue';
 
 export default {
   components: {
@@ -16,7 +17,7 @@ export default {
 
 <template>
   <!-- <div class="common-layout"> -->
-    <div>
+    <div class="kkk">
 
       <el-container>
         <el-header><Header/></el-header>
@@ -26,11 +27,20 @@ export default {
       
       <!-- 回到顶部 -->
       <el-backtop :right="40" :bottom="40" />
-
     </div>
 </template>
 
 <style>
+
+.tk-meta-input > div > div {
+  border: none;
+}
+
+.tk-meta-input > div > input {
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding-left: 5px;
+}
 
 .section-title {
   font-family: "MyFont", Verdana, sans-serif;
@@ -47,4 +57,5 @@ export default {
 .el-footer {
   padding: 0px;
 }
+
 </style>
