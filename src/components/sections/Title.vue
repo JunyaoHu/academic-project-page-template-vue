@@ -175,7 +175,7 @@ const buttons = [
   </div>
 </template>
 
-<style>
+<style scoped>
 
 /* 文章标题字体、字间距、居中排布、字号 */
 .paper-title {
