@@ -3,13 +3,16 @@
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 
+// logo地址，没有则置为""即可
+const logo = './logo.png'
+
 // 标题
 const title = 'Academic Project Page Template'
 
 // 标题颜色
 const title_color = '#000000'
 
-// 标题补充，没有则置为""即可
+// 标题补充，没有则置为''即可
 const title_supp = ' (Vue based)'
 
 // 标题补充颜色
@@ -60,10 +63,12 @@ const addresses = [
 const con_and_corresponding_author = 
   "#: Equal Contribution. *: Corresponding Author."
 
+// 最新消息
+const news = "🔥 [2024-12-15] This template project is still under development."
+
 // 强调内容
 const emphases = [
   "🎉 [ABCD 2024] Poster",
-  "🔥 This template project is still under development.",
   "🥰 Welcome any suggestion.",
 ]
 
@@ -111,6 +116,18 @@ const buttons = [
 
 <template>
   <div>
+
+    <!-- 最新消息提示 -->
+    <el-row justify="center">
+      <el-col :span="24">
+        <el-alert title="🔥 This template is still under development." type="success" />
+      </el-col>
+    </el-row>
+
+    <!-- 文章logo -->
+    <el-row v-if="logo" justify="center">
+      <el-image :src="logo" class="logo" fit="cover" />
+    </el-row>
 
     <!-- 文章标题 -->
     <el-row justify="center">
@@ -252,6 +269,22 @@ const buttons = [
 .btn-text {
   font-size: 20px;
   color: #ffffff;
+}
+
+.el-alert {
+  margin: 10px 0 0;
+}
+
+.el-alert:first-child {
+  margin: 0;
+}
+
+.logo {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: #ced3dc 0px 0px 3px 2px;
+  margin-top: 40px;
 }
 
 </style>
