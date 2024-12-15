@@ -18,7 +18,7 @@ export default {
     </el-row>
 
     <el-row justify="center">
-      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
+      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="12">
         <p>{{ abstract }}</p>
       </el-col>
     </el-row>

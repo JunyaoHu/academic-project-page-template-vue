@@ -39,17 +39,17 @@ export default {
             formatter: '{a} <br/>{b} : {c} ({d}%)',
         },
         legend: {
-            orient: 'vertical',
+            orient: 'horizontal',
             left: 'right',
-            top: 'center',
+            top: 'bottom',
             data: ['Direct', 'Email', 'Ad Networks', 'Video Ads', 'Search Engines'],
         },
         series: [
           {
             name: 'Traffic Sources',
             type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
+            radius: '50%',
+            center: ['50%', '50%'],
             data: [
               { value: 335, name: 'Direct' },
               { value: 310, name: 'Email' },
@@ -82,7 +82,7 @@ export default {
 
     <!-- echarts 图表 -->
     <el-row justify="center">
-      <el-col :xs="20" :sm="20" :md="16" :lg="12" :xl="12">
+      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="12">
         <v-chart class="chart" :option="option" autoresize />
       </el-col>
     </el-row>
@@ -93,7 +93,7 @@ export default {
 <style scoped>
 /* 图表属性 */
 .chart {
-  height: 320px;
+  height: 300px;
   margin-top: 20px;
 }
 </style>

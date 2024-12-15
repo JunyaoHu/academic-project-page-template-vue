@@ -78,7 +78,7 @@ export default {
       <el-col >
         <el-row justify="center" :gutter="20">
 
-          <el-col :span="7">
+          <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="6" >
 
             <div class="demo-image">
               <div class="block">
@@ -117,7 +117,7 @@ export default {
 
           </el-col>
 
-          <el-col :span="7">
+          <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="6" >
             
             <div class="demo-image">
               <div class="block">

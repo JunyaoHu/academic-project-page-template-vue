@@ -64,48 +64,48 @@ export default {
     <el-row justify="center">
       <el-col>
         <el-row justify="center" :gutter="20">
-          <el-col :span="7">
+          <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="6" >
             <div class="demo-image">
               <div class="block">
                 <!-- 预加载骨架 -->
-                <el-skeleton
+                <!-- <el-skeleton
                 style="width: 100%"
                 :loading="inputLoading"
                 animated
-                :throttle="1000">
+                :throttle="1000"> -->
                   <!-- 骨架模板 -->
-                  <template #template>
+                  <!-- <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                  </template>
+                  </template> -->
                   <!-- 实际显示图像内容 -->
-                  <template #default>
+                  <!-- <template #default> -->
                     <el-image :src="inputImagePath" fit="scale-down"/>
-                  </template>
-                </el-skeleton>
+                  <!-- </template> -->
+                <!-- </el-skeleton> -->
                 <!-- 图片路径 -->
                 <span class="demonstration">input: {{ inputImagePath }}</span>
               </div>
             </div>
           </el-col>
 
-          <el-col :span="7">
+          <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="6" >
             <div class="demo-image">
               <div class="block">
                 <!-- 预加载骨架 -->
-                <el-skeleton
+                <!-- <el-skeleton
                 style="width: 100%"
                 :loading="outputLoading"
                 animated
-                :throttle="1000">
+                :throttle="1000"> -->
                   <!-- 骨架模板 -->
-                  <template #template>
+                  <!-- <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                  </template>
+                  </template> -->
                   <!-- 实际显示图像内容 -->
-                  <template #default>
+                  <!-- <template #default> -->
                     <el-image :src="outputImagePath" fit="scale-down"/>
-                  </template>
-                </el-skeleton>
+                  <!-- </template> -->
+                <!-- </el-skeleton> -->
                 <!-- 图片路径 -->
                 <span class="demonstration">output: {{ outputImagePath }}</span>
               </div>
@@ -117,7 +117,7 @@ export default {
 
     <!-- 滑块控制 -->
     <el-row justify="center">
-      <el-col :span="14">
+      <el-col :span="12">
           <el-slider v-model="sliderValue" :min="minValue" :max="maxValue" @input="handleChange"/>
       </el-col>
     </el-row>

@@ -5,7 +5,7 @@
 // Based on Tencent CloudBase
 // See: https://twikoo.js.org
 
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 
 export default {
   setup() {
@@ -49,7 +49,7 @@ export default {
     </el-row>
     
     <el-row justify="center">
-      <el-col :span="16">
+      <el-col :xs="24" :sm="24" :md="24" :lg="16" :xl="12" >
         <div id="twikoo"></div>
       </el-col>
     </el-row>
@@ -63,6 +63,15 @@ export default {
 /* 留言板位置 */
 #twikoo {
   margin: 30px 0px;
+}
+
+#twikoo .tk-owo-emotion {
+  width: 1.5em;
+}
+
+#twikoo img {
+  height: 100%;
+  width: 100%;
 }
 
 #twikoo .el-input-group__prepend {
