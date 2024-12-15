@@ -1,22 +1,10 @@
 # academic-project-page-template-vue
 
-- **This project is in development, and welcome any suggestions.**
+> This project is in development, and welcome any suggestions.
+
+This Vue-based repository is developed for an academic paper page template. It can elegantly present the basic details of a paper. Carousel images, embedded videos, embedded ECharts, one-click copying of BibTeX, and the comment component are all supported. It enables researchers to promote papers conveniently and intuitively. 
 
 ![123](https://github.com/user-attachments/assets/0432d357-7bed-4c48-b846-80e4cfa56f12)
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
 
 ## Star History
 
