@@ -178,8 +178,8 @@ const buttons = [
       <el-col :span="20">
         <el-row justify="center">
           <a :href=button.link v-for="button in buttons">
-            <el-button class="guidance-button" size="large" :color="btn_color" :disabled="button.disabled" round>
-              <el-icon :size="22">
+            <el-button class="guidance-button" size="middle" :color="btn_color" :disabled="button.disabled" round>
+              <el-icon :size="18">
                 <component :is="button.component" />
               </el-icon>
               <span class="btn-text">{{ button.name }}</span>
@@ -214,7 +214,7 @@ const buttons = [
 
 /* 引导材料按钮 */
 .guidance-button {
-  margin: 10px 6px;
+  margin: 8px 5px;
   box-shadow: #d8d8d8 1px 1px 1px 1px;
 }
 
@@ -266,7 +266,7 @@ const buttons = [
 
 /* 引导材料按钮文字属性 */
 .btn-text {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
 }
 
