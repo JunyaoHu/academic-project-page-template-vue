@@ -15,9 +15,8 @@ export default {
 </script>
 
 <template>
-  <!-- <div class="common-layout"> -->
     <div>
-
+      
       <el-container>
         <el-header><Header/></el-header>
         <el-main><Main/></el-main>
@@ -25,7 +24,7 @@ export default {
       </el-container>
       
       <!-- 回到顶部 -->
-      <el-backtop :right="40" :bottom="40" />
+      <el-backtop :right="40" :bottom="80" />
     </div>
 </template>
 

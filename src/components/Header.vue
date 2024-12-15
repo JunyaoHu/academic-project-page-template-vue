@@ -93,6 +93,11 @@ const more_paper = {
 	background-size: 3px 3px;
 }
 
+/* 水平导航高度 */
+.el-header {
+    --el-header-height: 50px;
+}
+
 </style>
 
 <style scoped>
@@ -106,6 +111,7 @@ const more_paper = {
 .el-menu--horizontal {
     --el-menu-horizontal-height: 50px;
 }
+
 
 /* 链接装饰，取消下划线和链接颜色 */
 a {

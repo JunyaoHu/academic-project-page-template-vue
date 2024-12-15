@@ -62,7 +62,7 @@ export default {
 
 /* 留言板位置 */
 #twikoo {
-  margin: 30px 0px;
+  margin: 30px 0px 0px 0px;
 }
 
 #twikoo .tk-owo-emotion {
