@@ -2,7 +2,7 @@
 
 - **This project is in development, and welcome any suggestions.**
 
-![preview](https://github.com/user-attachments/assets/fc823753-8100-4f42-8cd9-f6220c32d580)
+![img](https://github.com/user-attachments/assets/20bba421-03fb-4d47-b18f-f0df2fafc34c)
 
 ## Recommended IDE Setup
 
