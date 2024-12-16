@@ -4,6 +4,8 @@
 
 This Vue-based repository is developed for an academic paper page template. It can elegantly present the basic details of a paper. Carousel images, embedded videos, embedded ECharts, one-click copying of BibTeX, and the comment component are all supported. It enables researchers to promote papers conveniently and intuitively. 
 
+Example: https://junyaohu.github.io/academic-project-page-template-vue/
+
 ![123](https://github.com/user-attachments/assets/0432d357-7bed-4c48-b846-80e4cfa56f12)
 
 ## Star History
