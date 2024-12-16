@@ -8,6 +8,19 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 
 ![123](https://github.com/user-attachments/assets/0432d357-7bed-4c48-b846-80e4cfa56f12)
 
+# Installation
+
+1. Create Vue environment: https://cn.vuejs.org/guide/quick-start.html
+2. Git clone this template
+3. Edit the website by yourself
+4. `npm run dev` to preview your website on your local pc
+5. git push to your github repo
+6. choose `gh-pages` branch to show your website on github
+
+Step 6: 
+![QQ20241216-225116](https://github.com/user-attachments/assets/c0d7198f-6254-48e7-bc23-924ce065eb53)
+
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JunyaoHu/academic-project-page-template-vue&type=Date)](https://star-history.com/#JunyaoHu/academic-project-page-template-vue&Date)
