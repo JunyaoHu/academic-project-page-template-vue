@@ -8,7 +8,7 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 
 ![123](https://github.com/user-attachments/assets/0432d357-7bed-4c48-b846-80e4cfa56f12)
 
-# Installation
+## Installation
 
 1. Create a new empty repository for your site (https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site)
    - if your repo name is `xxx.github.io`, your site will be on `xxx.github.io`
@@ -31,7 +31,7 @@ Step 2:
 Step 9: 
 ![image](https://github.com/user-attachments/assets/c0d7198f-6254-48e7-bc23-924ce065eb53)
 
-# How to deploy your own comment area?
+## How to deploy your own comment area?
 
 > Twikoo is divided into two parts: cloud functions and front-end. To integrate Twikoo on your website, you need to deploy both cloud functions and front-end at the same time. Please pay attention to keeping the two versions consistent when deploying.
 
