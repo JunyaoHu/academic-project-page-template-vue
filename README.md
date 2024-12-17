@@ -23,7 +23,7 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 7. `npm run dev` to preview your website on your local pc
 8. git push to your empty repo in step 1, then .github/workflows will do the Github action to generate `gh-pages` branch automatically, you can wait a minute
 9. Choose `gh-pages` branch to show your website on github (Publishing from a branch: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
-10. After the first deployment, if you want to update your website, you can edit your website locally and git push to your repo, you can skip step 7, then the website will be updated automatically soon.
+10. After the first deployment, if you want to update your website, you can edit your website locally and git push to your repo, you can skip step 9, then the website will be updated automatically soon.
 
 Step 2:
 ![image](https://github.com/user-attachments/assets/d1d42f31-878f-4815-8e36-1278a197d8eb)
