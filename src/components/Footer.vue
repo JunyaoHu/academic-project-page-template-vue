@@ -5,7 +5,7 @@ const links = {
     Vue: "https://cn.vuejs.org/",
     Vite: "https://cn.vitejs.dev/",
     ElementPlus: "https://element-plus.org/zh-CN/",
-    template: "https://junyaohu.github.io/template/",
+    template: "https://github.com/JunyaoHu/academic-project-page-template-vue",
 }
 </script>
 

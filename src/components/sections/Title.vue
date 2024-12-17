@@ -69,15 +69,16 @@ const news = "🔥 [2024-12-15] This template project is still under development
 // 强调内容
 const emphases = [
   "🎉 [ABCD 2024] Poster",
-  "🥰 Welcome any suggestion.",
+  "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
+  "传递人工智能算法科普教育的减约理解",
+  "提升信息效率及认知维度"
 ]
 
 // 提供引导资料链接
 const buttons = [
   {
-    disabled: false,
+    disabled: true,
     name: "Paper",
-    link: "https://junyaohu.github.io/",
     component: Document,
   },
   {
@@ -86,13 +87,15 @@ const buttons = [
     component: Document,
   },
   {
-    disabled: true,
+    disabled: false,
     name: "Code",
+    link: "https://github.com/JunyaoHu/academic-project-page-template-vue",
     component: Files,
   },
   {
-    disabled: true,
+    disabled: false,
     name: "Demo",
+    link: "https://junyaohu.github.io/academic-project-page-template-vue",
     component: MagicStick,
   },
   {
@@ -106,8 +109,9 @@ const buttons = [
     component: DataAnalysis,
   },
   {
-    disabled: true,
+    disabled: false,
     name: "Video",
+    link: "https://www.bilibili.com/video/BV15XkgYiE73/",
     component: Film,
   },
 ]
