@@ -39,6 +39,17 @@ There we have deploy the front-end for you, you should only build your own cloud
 
 See [here](https://twikoo.js.org/backend.html) for more details. We recomment that you use [vercel](https://twikoo.js.org/backend.html#vercel-%E9%83%A8%E7%BD%B2) to do this. This can be more arbitrary, depending on you.
 
+After building your own cloud functions, you can edit the config in `src/components/sections/Comment.vue`:
+
+```
+// Fill in envId for Tencent Cloud environment; fill in address for Vercel environment (https://xxx.versel.app)
+envId: 'https://blog-comment-nvoz-8o7dxhfbd-junyaohus-projects.vercel.app', 
+// default: 'ap-shanghai'，Tencent Cloud: 'ap-shanghai' / 'ap-guangzhou'; Vercel: ''
+region: '', 
+// comment area language， more supported languages: https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+lang: 'zh-CN',
+```
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JunyaoHu/academic-project-page-template-vue&type=Date)](https://star-history.com/#JunyaoHu/academic-project-page-template-vue&Date)
