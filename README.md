@@ -31,6 +31,13 @@ Step 2:
 Step 9: 
 ![image](https://github.com/user-attachments/assets/c0d7198f-6254-48e7-bc23-924ce065eb53)
 
+# How to deploy your own comment area?
+
+> Twikoo is divided into two parts: cloud functions and front-end. To integrate Twikoo on your website, you need to deploy both cloud functions and front-end at the same time. Please pay attention to keeping the two versions consistent when deploying.
+
+There we have deploy the front-end for you, you should only build your own cloud functions.
+
+See [here](https://twikoo.js.org/backend.html) for more details. We recomment that you use [vercel](https://twikoo.js.org/backend.html#vercel-%E9%83%A8%E7%BD%B2) to do this. This can be more arbitrary, depending on you.
 
 ## Star History
 
