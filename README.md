@@ -10,18 +10,18 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 
 # Installation
 
-1. Create a new repository for your site (https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site)
+1. Create a new empty repository for your site (https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site)
    - if your repo name is `xxx.github.io`, your site will be on `xxx.github.io`
    - if your repo name is `xxx`, your site will be on `github.com/yourname/xxx`: 
 2. Enable Github Actions of your repo: Action -> I Understand (https://docs.github.com/zh/actions/writing-workflows/using-workflow-templates)
 3. Prepare Vue environment
     - install nodejs: (https://nodejs.org/zh-cn)
     - install vue: `npm create vue@latest` (https://cn.vuejs.org/guide/quick-start.html)
-4. Git clone this template and copy it to your new repo in step 1
+4. Git clone this template
 5. (Edit the website by yourself)
 6. `npm i` to install necessary vue dependencies 
 7. `npm run dev` to preview your website on your local pc
-8. git push to your github site repo in step 1, then .github/workflows will generate `gh-pages` branch automatically, you can wait a minute
+8. git push to your empty repo in step 1, then .github/workflows will do the Github action to generate `gh-pages` branch automatically, you can wait a minute
 9. Choose `gh-pages` branch to show your website on github (Publishing from a branch: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
 10. After the first deployment, if you want to update your website, you can edit your website locally and git push to your repo, you can skip step 7, then the website will be updated automatically soon.
 
