@@ -31,6 +31,58 @@ Step 2:
 Step 9: 
 ![image](https://github.com/user-attachments/assets/c0d7198f-6254-48e7-bc23-924ce065eb53)
 
+## How to edit this template?
+
+- Edit the content `<scripts>` in `.vue`, I have wrote some useful comments.
+
+For example, you can change the original content to your own info (like paper's tile, logo, your name, your address, and the guidance buttons of your other materials) in `src/components/sections/Title.vue`
+
+```
+const logo = ''
+const title = ''
+const title_color = ''
+const title_supp = ''
+const title_supp_color = ''
+const btn_color = ''
+const authors = [
+  {
+    name: "",
+    icon: "",
+    homepage: "",
+    address_flag: ""
+  },
+  ...
+]
+
+const addresses = [
+  {
+    address_flag: "",
+    name: "",
+    icon: "",
+    homepage: ""
+  },
+  ...
+]
+
+const news = ""
+
+const emphases = [
+  "",
+  ...
+]
+
+const buttons = [
+  {
+    disabled: ,
+    name: "",
+    component: ,
+  },
+   ...
+]
+```
+
+- If you want to change the layout and use other components, you can read Element Plus Doc (https://element-plus.org/zh-CN/component/overview.html).
+
 ## How to deploy your own comment area?
 
 > Twikoo is divided into two parts: cloud functions and front-end. To integrate Twikoo on your website, you need to deploy both cloud functions and front-end at the same time. Please pay attention to keeping the two versions consistent when deploying.
