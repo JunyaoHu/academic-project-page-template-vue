@@ -10,17 +10,20 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 
 # Installation
 
-1. Create/Fork this repository for your site (https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site)
-2. Enable Github Actions of your repo: Action -> I Understand (https://docs.github.com/zh/actions/writing-workflows/using-workflow-templates)
-3. Prepare Vue environment
+1. Create a new repository for your site (https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site)
+   - if your repo name is `xxx.github.io`, your site will be on `xxx.github.io`
+   - if your repo name is `xxx`, your site will be on `github.com/yourname/xxx`: 
+3. Enable Github Actions of your repo: Action -> I Understand (https://docs.github.com/zh/actions/writing-workflows/using-workflow-templates)
+4. Prepare Vue environment
     - install nodejs: (https://nodejs.org/zh-cn)
     - install vue: `npm create vue@latest` (https://cn.vuejs.org/guide/quick-start.html)
-4. Git clone this template
-5. Edit the website by yourself
-6. `npm run dev` to preview your website on your local pc
-7. git push to your github site repo in step 1, then .github/workflows will generate `gh-pages` branch automatically, you can wait a minute
-8. Choose `gh-pages` branch to show your website on github (Publishing from a branch: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
-9. After the first deployment, if you want to update your website, you can edit your website locally and git push to your repo, you can skip step 7, then the website will be updated automatically soon.
+5. Git clone this template and copy it to your new repo in step 1
+6. (Edit the website by yourself)
+7. `npm i` to install necessary vue dependencies 
+8. `npm run dev` to preview your website on your local pc
+9. git push to your github site repo in step 1, then .github/workflows will generate `gh-pages` branch automatically, you can wait a minute
+10. Choose `gh-pages` branch to show your website on github (Publishing from a branch: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
+11. After the first deployment, if you want to update your website, you can edit your website locally and git push to your repo, you can skip step 7, then the website will be updated automatically soon.
 
 Step 2:
 ![image](https://github.com/user-attachments/assets/d1d42f31-878f-4815-8e36-1278a197d8eb)
