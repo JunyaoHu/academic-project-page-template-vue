@@ -12,7 +12,7 @@ export default {
     onMounted(() => {
 
       const cdnScript = document.createElement('script');
-      // 一个修改过后的的 twikoo js 版本，不然直接导入sdn的话和element原版内容的冲突
+      // 一个修改过后的的 twikoo js 版本，不然直接导入cdn的话和element原版内容的冲突
       cdnScript.src = './twikoo/twikoo.junyaohu.js';
       // cdnScript.src = 'https://cdn.staticfile.org/twikoo/1.6.40/twikoo.all.min.js';
       cdnScript.async = true;
