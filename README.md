@@ -17,7 +17,7 @@ Example: https://junyaohu.github.io/academic-project-page-template-vue/
 3. Prepare Vue environment
     - install nodejs: (https://nodejs.org/zh-cn)
     - install vue: `npm create vue@latest` (https://cn.vuejs.org/guide/quick-start.html)
-4. Git clone this template
+4. Git clone this template and put it into your empty repo in step 1
 5. (Edit the website by yourself)
 6. `npm i` to install necessary vue dependencies 
 7. `npm run dev` to preview your website on your local pc
