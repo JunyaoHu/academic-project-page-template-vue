@@ -110,8 +110,14 @@ const buttons = [
   },
   {
     disabled: false,
-    name: "Video",
+    name: "Video (减论)",
     link: "https://www.bilibili.com/video/BV15XkgYiE73/",
+    component: Film,
+  },
+  {
+    disabled: false,
+    name: "Video (Tutorial)",
+    link: "https://www.bilibili.com/video/BV1oUrfYzEqZ",
     component: Film,
   },
 ]
