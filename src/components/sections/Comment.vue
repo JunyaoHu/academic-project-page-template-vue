@@ -86,16 +86,26 @@ export default {
   height: 100%;
 }
 
+#twikoo p code {
+  font-family: 'Consolas';
+  border: 0.5px solid #bcbcbc;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background: #eeeeee;
+  color: black
+}
+
 #twikoo pre {
   border: 0.5px solid #bcbcbc;
   border-radius: 5px;
   padding: 10px;
-  background: #f4f5ff;
+  background: #eeeeee;
 }
 
-#twikoo code {
+#twikoo pre code {
   font-family: 'Consolas';
   font-size: 14px;
+  color: black
 }
 
 /* 留言板头像属性 */
@@ -110,19 +120,19 @@ export default {
   box-shadow: 0px 0px 3px #dadada;;
 }
 
-.tk-content {
+/* .tk-content {
   background: #eeffee;
   border-radius: 5px;
   box-shadow: 0px 0px 3px #dadada;
   padding: 20px 20px;
-}
-
+} */
+/* 
 .tk-replies .tk-content {
   background: #f6faf6;
   border-radius: 5px;
   box-shadow: 0px 0px 3px #dadada;
   padding: 20px 20px;
-}
+} */
 
 /* 留言板链接属性 */
 .tk-actions a {
