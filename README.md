@@ -14,7 +14,7 @@ This Vue-based repository is developed for an academic paper page template. It c
 
 **1. Github: Create a new repository**
 
-Click `Create a new repository` to create a new empty repository based on this template for your site
+Click `Create a new repository` to create a new copied repository based on this template for your site
 
 ![image](https://github.com/user-attachments/assets/e828d5bf-1269-4602-b2ca-c7d20b9c7fe1)
 
@@ -62,7 +62,7 @@ Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/co
 
 **8. Local PC: `git push`**
 
-`git push` to your empty repo in step 1, then .github/workflows will do the Github action to generate `gh-pages` branch automatically, you can wait a minute, `xxx.github.io` or `yourname.github.io/xxx` will be updated automatically.
+`git push` to your copied repo, then .github/workflows will do the Github action to generate `gh-pages` branch automatically, you can wait a minute, `xxx.github.io` or `yourname.github.io/xxx` will be updated automatically.
 
 **9. After the first deployment**
 
