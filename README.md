@@ -23,13 +23,7 @@ Click `Create a new repository` to create a new empty repository based on this t
 
 Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site
 
-**2. Github: Enable Github Actions Permission**
-
-`Settings` -> `Actions` -> `General` -> `Workflow permissions` -> `Read and write permissions`, then Save
-
-![image](https://github.com/user-attachments/assets/cb1f619d-0203-4502-9a54-68be4a7383c3)
-
-**3. Github: Edit vite config**
+**2. Github: Edit vite config**
 
 in file `vite.config.js`, you should edit the `base` to your repo name xxx
 
@@ -42,7 +36,7 @@ base:'/xxx',
 
 > This step is just so that you can intuitively understand that the website can work normally in your repository, and you can also make modifications manually in the following steps. 
 
-**4. Github: Publish**
+**3. Github: Publish**
 
 Choose `gh-pages` branch to show your website on github, then you will see your website on `xxx.github.io` or `yourname.github.io/xxx`
 
@@ -50,25 +44,25 @@ Choose `gh-pages` branch to show your website on github, then you will see your 
 
 Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch
 
-**5. Local PC: Prepare Vue environment**
+**4. Local PC: Prepare Vue environment**
  - install nodejs: (https://nodejs.org/zh-cn)
  - install vue: `npm create vue@latest` (https://cn.vuejs.org/guide/quick-start.html)
   
-**6. Local PC: `Git clone` your new repo xxx**
+**5. Local PC: `Git clone` your new repo xxx**
 
-**7. Local PC: install dependencies**
+**6. Local PC: install dependencies**
 
 `npm i` to install necessary vue dependencies 
 
-**8. Local PC: Edit and preview your website**
+**7. Local PC: Edit and preview your website**
 
 `npm run dev` to preview your website on your local pc, edit by yourself until you feel nice
 
-**9. Local PC: `git push`**
+**8. Local PC: `git push`**
 
 `git push` to your empty repo in step 1, then .github/workflows will do the Github action to generate `gh-pages` branch automatically, you can wait a minute, `xxx.github.io` or `yourname.github.io/xxx` will be updated automatically.
 
-**10. After the first deployment**
+**9. After the first deployment**
 
 If you want to update your website again, you can edit your website locally and git push to your repo, `gh-pages` branch and the website will be both updated automatically soon.
 
