@@ -1,6 +1,10 @@
 # 以下以一个构建vue项目的yml文件为例子
 name: CI
- 
+
+# 给予工作流写权限，因为需要向gh-pages分支提交代码
+permissions:
+  contents: write
+
 on:
     push:
         branches:
