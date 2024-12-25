@@ -28,7 +28,7 @@ export default defineComponent({
         <VueLatex expression="\LaTeX" />
         formula, like
         <VueLatex expression="1+1=2" />.
-        And We can show an interline formula like this: 
+        And we can show an interline formula like this: 
         <VueLatex expression="
             D(x) = \begin{cases}
             \lim\limits_{x \to 0} \frac{a^x}{b+c}, & x<3 \\
