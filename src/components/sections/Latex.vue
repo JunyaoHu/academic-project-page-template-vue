@@ -19,13 +19,15 @@ export default defineComponent({
 
     <el-row justify="center">
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="12">
-        Thanks to 
-        <el-link type="primary" href="https://katex.org/docs/options.html" target="_blank">KaTex</el-link> 
-        and 
-        <el-link type="primary" href="https://github.com/Shimada666/VaTex" target="_blank">VaTex</el-link> 
-        , now we can show an inline
+        <p>
+        Thanks to
+        <a href="https://katex.org/docs/options.html" target="_blank">KaTex</a>
+        and
+        <a href="https://github.com/Shimada666/VaTex" target="_blank">VaTex</a>,
+        now we can show an inline
         <VueLatex expression="\LaTeX" />
-        formula.
+        formula, like
+        <VueLatex expression="1+1=2" />.
         And We can show an interline formula like this: 
         <VueLatex expression="
             D(x) = \begin{cases}
@@ -34,6 +36,7 @@ export default defineComponent({
             \int_a^{3b}x_{ij}+e^2 \mathrm{d}x,& x>3 \\
             \end{cases}
           " display-mode />
+        </p>
       </el-col>
     </el-row>
   </div>
@@ -41,5 +44,21 @@ export default defineComponent({
 
 <style scoped>
 
+/* 摘要文字居中 */
+p {
+  text-align: justify;
+} 
+
+/* 链接颜色装饰 */
+a {
+  color: #3273dc;
+  text-decoration: none;
+}
+
+/* 鼠标焦点悬浮在链接上的颜色装饰 */
+a:hover {
+  color: #848484;
+  border-bottom: dotted;
+}
 
 </style>

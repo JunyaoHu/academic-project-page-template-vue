@@ -35,7 +35,7 @@ export default {
   <Carousel/>
   <Video/>
   <Abstract/>
-  <!-- <Latex/> -->
+  <Latex/>
   <Echart/>
   <Table/>
   <Collapse/>
