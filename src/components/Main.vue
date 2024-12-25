@@ -10,6 +10,7 @@ import Table from './sections/Table.vue'
 import Collapse from './sections/Collapse.vue'
 import SeletionForComparison from './sections/SeletionForComparison.vue'
 import Comment from './sections/Comment.vue'
+import Latex from './sections/Latex.vue'
 
 export default {
   components: {
@@ -24,6 +25,7 @@ export default {
     Table,
     SeletionForComparison,
     Comment,
+    Latex
   }
 }
 </script>
@@ -33,6 +35,7 @@ export default {
   <Carousel/>
   <Video/>
   <Abstract/>
+  <!-- <Latex/> -->
   <Echart/>
   <Table/>
   <Collapse/>
@@ -40,5 +43,4 @@ export default {
   <ImageSlider/>
   <BibTeX/>
   <Comment/>
-
 </template>

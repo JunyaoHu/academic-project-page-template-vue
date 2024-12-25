@@ -188,7 +188,7 @@ const buttons = [
       <el-col :span="20">
         <el-row justify="center">
           <a :href=button.link v-for="button in buttons">
-            <el-button class="guidance-button" size="middle" :color="btn_color" :disabled="button.disabled" round>
+            <el-button class="guidance-button" size="default" :color="btn_color" :disabled="button.disabled" round>
               <el-icon :size="18">
                 <component :is="button.component" />
               </el-icon>
