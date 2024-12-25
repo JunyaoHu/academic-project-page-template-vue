@@ -11,6 +11,7 @@ import Collapse from './sections/Collapse.vue'
 import SeletionForComparison from './sections/SeletionForComparison.vue'
 import Comment from './sections/Comment.vue'
 import Latex from './sections/Latex.vue'
+import Model3D from './sections/Model3D.vue'
 
 export default {
   components: {
@@ -25,7 +26,8 @@ export default {
     Table,
     SeletionForComparison,
     Comment,
-    Latex
+    Latex,
+    Model3D
   }
 }
 </script>
@@ -37,6 +39,7 @@ export default {
   <Abstract/>
   <Latex/>
   <Echart/>
+  <Model3D/>
   <Table/>
   <Collapse/>
   <SeletionForComparison/>
