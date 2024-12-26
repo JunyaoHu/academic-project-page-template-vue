@@ -13,6 +13,7 @@ import SeletionForComparison from './sections/SeletionForComparison.vue'
 import Comment from './sections/Comment.vue'
 import Latex from './sections/Latex.vue'
 import Model3D from './sections/Model3D.vue'
+import GaussianSplats3D from './sections/GaussianSplats3D.vue'
 
 export default {
   components: {
@@ -29,7 +30,8 @@ export default {
     SeletionForComparison,
     Comment,
     Latex,
-    Model3D
+    Model3D,
+    GaussianSplats3D
   }
 }
 </script>
@@ -37,13 +39,14 @@ export default {
 <template>
   <Title/>
   <Carousel/>
-  <Video/>
+  <!-- <Video/> -->
   <Abstract/>
   <Latex/>
   <Table/>
   <Collapse/>
   <Echart/>
   <Model3D/>
+  <GaussianSplats3D/>
   <SeletionForComparison/>
   <ImageSliderInner/>
   <ImageSlider/>
