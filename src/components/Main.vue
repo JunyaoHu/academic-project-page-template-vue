@@ -5,6 +5,7 @@ import BibTeX from './sections/BibTeX.vue'
 import Carousel from './sections/Carousel.vue'
 import Video from './sections/Video.vue'
 import ImageSlider from './sections/ImageSlider.vue'
+import ImageSliderInner from './sections/ImageSliderInner.vue'
 import Echart from './sections/Echart.vue'
 import Table from './sections/Table.vue'
 import Collapse from './sections/Collapse.vue'
@@ -21,6 +22,7 @@ export default {
     Carousel,
     Video,
     ImageSlider,
+    ImageSliderInner,
     Echart,
     Collapse,
     Table,
@@ -38,12 +40,13 @@ export default {
   <Video/>
   <Abstract/>
   <Latex/>
-  <Echart/>
-  <Model3D/>
   <Table/>
   <Collapse/>
+  <Echart/>
+  <Model3D/>
   <SeletionForComparison/>
   <ImageSlider/>
+  <ImageSliderInner/>
   <BibTeX/>
   <Comment/>
 </template>

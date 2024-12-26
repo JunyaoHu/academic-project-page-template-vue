@@ -36,6 +36,7 @@ export default {
   font-size: 28px;
   text-align: justify;
   margin: 0px;
+  text-align: center;
 }
 
 .el-header {
