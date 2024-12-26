@@ -9,7 +9,8 @@ onMounted(() => {
             'rootElement': gs,
             'cameraUp': [0, -1, -0.6],
             'initialCameraPosition': [-1, -4, 6],
-            'initialCameraLookAt': [0, 4, 0]
+            'initialCameraLookAt': [0, 4, 0],
+            'sharedMemoryForWorkers': false,
         });
         viewer.addSplatScene('./3dgs/bonsai.ksplat', {
             'splatAlphaRemovalThreshold': 5,
