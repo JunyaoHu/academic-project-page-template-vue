@@ -68,20 +68,20 @@ export default {
             <div class="demo-image">
               <div class="block">
                 <!-- 预加载骨架 -->
-                <!-- <el-skeleton
+                <el-skeleton
                 style="width: 100%"
                 :loading="inputLoading"
                 animated
-                :throttle="1000"> -->
+                :throttle="1000">
                   <!-- 骨架模板 -->
-                  <!-- <template #template>
+                  <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                  </template> -->
+                  </template>
                   <!-- 实际显示图像内容 -->
-                  <!-- <template #default> -->
+                  <template #default>
                     <el-image :src="inputImagePath" fit="scale-down"/>
-                  <!-- </template> -->
-                <!-- </el-skeleton> -->
+                  </template>
+                </el-skeleton>
                 <!-- 图片路径 -->
                 <span class="demonstration">input: {{ inputImagePath }}</span>
               </div>
@@ -92,20 +92,20 @@ export default {
             <div class="demo-image">
               <div class="block">
                 <!-- 预加载骨架 -->
-                <!-- <el-skeleton
+                <el-skeleton
                 style="width: 100%"
                 :loading="outputLoading"
                 animated
-                :throttle="1000"> -->
+                :throttle="1000">
                   <!-- 骨架模板 -->
-                  <!-- <template #template>
+                  <template #template>
                     <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                  </template> -->
+                  </template>
                   <!-- 实际显示图像内容 -->
-                  <!-- <template #default> -->
+                  <template #default>
                     <el-image :src="outputImagePath" fit="scale-down"/>
-                  <!-- </template> -->
-                <!-- </el-skeleton> -->
+                  </template>
+                </el-skeleton>
                 <!-- 图片路径 -->
                 <span class="demonstration">output: {{ outputImagePath }}</span>
               </div>

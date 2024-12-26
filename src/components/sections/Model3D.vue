@@ -40,7 +40,7 @@ scale.value = [
         we can visualize these 3D models here. It supports dae, fbx, gltf(glb), obj, ply, stl models.
         </p>
         <el-row justify="center">
-          <el-col :xs="24" :sm="12" >
+          <el-col :xs="20" :sm="12" >
             <vue3dLoader
               filePath="./model3d/collada/stormtrooper/stormtrooper.dae"
               :cameraPosition="{ x: -8, y: 10, z: -10 }"
@@ -50,7 +50,7 @@ scale.value = [
               :backgroundColor="0xccddff"
             />
           </el-col>
-          <el-col :xs="24" :sm="12" >
+          <el-col :xs="20" :sm="12" >
             <vue3dLoader
               :filePath="filePath"
               :scale="scale"
