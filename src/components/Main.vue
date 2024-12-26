@@ -45,8 +45,8 @@ export default {
   <Echart/>
   <Model3D/>
   <SeletionForComparison/>
-  <ImageSlider/>
   <ImageSliderInner/>
+  <ImageSlider/>
   <BibTeX/>
   <Comment/>
 </template>
