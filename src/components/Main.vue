@@ -39,7 +39,7 @@ export default {
 <template>
   <Title/>
   <Carousel/>
-  <!-- <Video/> -->
+  <Video/>
   <Abstract/>
   <Latex/>
   <Table/>
