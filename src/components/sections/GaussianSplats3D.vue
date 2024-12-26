@@ -7,17 +7,17 @@ onMounted(() => {
     if (gs) {
         const viewer = new GaussianSplats3D.Viewer({
             'rootElement': gs,
-            'cameraUp': [0, -1, -0.6],
-            'initialCameraPosition': [-1, -4, 6],
-            'initialCameraLookAt': [0, 4, 0],
+            'cameraUp': [0, -1, 0],
+            'initialCameraPosition': [-2.13, -0.50, -4.63],
+            'initialCameraLookAt': [-0.08, 0.89, -1.36],
             'sharedMemoryForWorkers': false,
         });
-        viewer.addSplatScene('./3dgs/bonsai.ksplat', {
+        viewer.addSplatScene('./3dgs/cotton-mirror.splat', {
             'splatAlphaRemovalThreshold': 5,
             'showLoadingUI': true,
-            'position': [0, 1, 0],
+            'position': [0, 1, -1],
             'rotation': [0, 0, 0, 1],
-            'scale': [1.5, 1.5, 1.5]
+            'scale': [0.18, 0.18, 0.18]
         })
         .then(() => {
             viewer.start();
