@@ -46,7 +46,7 @@ export default {
   <Collapse/>
   <Echart/>
   <Model3D/>
-  <GaussianSplats3D/>
+  <!-- <GaussianSplats3D/> -->
   <SeletionForComparison/>
   <ImageSliderInner/>
   <ImageSlider/>
