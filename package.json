@@ -19,6 +19,7 @@
     "vue": "^3.3.4",
     "vue-3d-loader": "^2.2.4",
     "vue-echarts": "^6.6.8",
+    "vue-video-player": "^6.0.0",
     "vue3-compare-image": "^1.2.5"
   },
   "devDependencies": {
