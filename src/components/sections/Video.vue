@@ -32,7 +32,7 @@ export default defineComponent({
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
         <el-container class="video-container">
           <video-player
-            src="/video/video.mp4"
+            src="./video/video.mp4"
             controls
             fluid="true"
             muted="true"
