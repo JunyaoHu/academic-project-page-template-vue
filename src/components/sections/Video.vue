@@ -1,11 +1,39 @@
-<script>
-import { defineComponent } from 'vue'
-import { VideoPlayer } from '@videojs-player/vue'
+<script setup>
+import { onMounted, onUnmounted, ref } from "vue"
+import videojs from "video.js"
 import 'video.js/dist/video-js.css'
 
-export default defineComponent({
-  components: {
-    VideoPlayer
+const videoPlayer = ref(null)
+const myPlayer = ref(null)
+
+onMounted(() => {
+  myPlayer.value = videojs(videoPlayer.value, {
+    poster: "",
+    autoplay: true,
+    controls: true,
+    muted: true,
+    fluid: true,
+    preload: "auto",
+    sources: [
+      {
+        // 在这里设置你本地的视频地址
+        src: "./video/video.mp4",
+        type: 'video/mp4',
+      }
+    ],
+    playbackRates: [0.5, 1, 1.5, 2],
+      controlBar: {
+      skipButtons: {
+        forward: 5,
+        backward: 5
+      }
+    }
+  })
+})
+
+onUnmounted(() => {
+  if (myPlayer.value) {
+    myPlayer.value.dispose()
   }
 })
 </script>
@@ -31,13 +59,7 @@ export default defineComponent({
     <el-row justify="center">
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
         <el-container class="video-container">
-          <video-player
-            src="./video/video.mp4"
-            controls
-            fluid="true"
-            muted="true"
-            :volume="0.5"
-          />
+          <video ref="videoPlayer" class="video-js" ></video>
         </el-container>
       </el-col>
     </el-row>
