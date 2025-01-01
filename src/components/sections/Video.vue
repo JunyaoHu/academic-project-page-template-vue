@@ -13,7 +13,6 @@ onMounted(() => {
     controls: true,
     muted: true,
     fluid: true,
-    preload: "auto",
     sources: [
       {
         // 在这里设置你本地的视频地址
