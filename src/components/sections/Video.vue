@@ -15,7 +15,7 @@
 
         <!-- local -->
         <el-container class="video-container">
-          <video controls muted preload playsinline width="400">
+          <video controls muted preload playsinline>
             <source src="/video/video.mp4" type="video/mp4">
           </video>
         </el-container>
