@@ -1,56 +1,58 @@
-<script>
-export default {
-  data() {
-    return {
-      sliderValue: 0, // 滑块的值
-      inputImageRootPath:  './image_slider/huaqiang/input/', // 图片存放路径
-      outputImageRootPath: './image_slider/huaqiang/output/',
-      inputImagePath: '',
-      outputImagePath: '',
-      inputLoading: true,
-      outputLoading: true,
-      minValue: 0,
-      maxValue: 9,
-    };
-  },
-  beforeMount() {
-    // 在组件挂载之前预加载第一张图片
-    this.loadImage(this.sliderValue, this.inputImageRootPath, 'input');
-    this.loadImage(this.sliderValue, this.outputImageRootPath, 'output');
-  },
-  methods: {
-    handleChange(value) {
-      // 当滑块的值改变时，加载对应的图片
-      this.loadImage(value, this.inputImageRootPath, 'input');
-      this.loadImage(value, this.outputImageRootPath, 'output');
-    },
-    loadImage(value, path, type) {
-      // 构建图片路径
-      if (type == 'input') {
-          this.inputLoading = true;
-      } else {
-          this.outputLoading = true;
-      }
-      const imagePath = `${path}${value}.png`;
-      // 创建一个新的Image对象用于预加载
-      const image = new Image();
-      image.src = imagePath;
-      // 监听图片加载完成事件
-      image.onload = () => {
-          // 图片加载完成后，更新当前图片路径
-          if (type == 'input') {
-            this.inputImagePath = imagePath;
-            // console.log(this.inputImagePath);
-            this.inputLoading = false;
-          } else {
-            this.outputImagePath = imagePath;
-            // console.log(this.outputImagePath);
-            this.outputLoading = false;
-          }
-      };
-    },
-  },
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const NUM_INTERP_FRAMES = 10;
+const inputImagePaths = [];
+const outputImagePaths = [];
+const inputImageRootPath = './image_slider/huaqiang/input/';
+const outputImageRootPath = './image_slider/huaqiang/output/';
+const minValue = 0;
+const maxValue = 9;
+let inputImagePath = ref("");
+let outputImagePath = ref("");
+let sliderValue = ref(0);
+let isLoading = ref(true);
+
+const preloadInterpolationImages = () => {
+  const promises = [];
+
+  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
+    var inputPath = inputImageRootPath + String(i) + '.png';
+    const inputImg = new Image();
+    inputImagePaths[i] = inputImg;
+    const inputPromise = new Promise((resolve) => {
+      inputImg.onload = resolve;
+    });
+    inputImg.src = inputPath;
+    promises.push(inputPromise);
+
+    var outputPath = outputImageRootPath + String(i) + '.png';
+    const outputImg = new Image();
+    outputImagePaths[i] = outputImg;
+    const outputPromise = new Promise((resolve) => {
+        outputImg.onload = resolve;
+    });
+    outputImg.src = outputPath;
+    promises.push(outputPromise);
+  }
+
+  return Promise.all(promises).then(() => {
+    isLoading.value = false;
+    console.log("preloadInterpolationImages finished");
+  });
+}
+
+onMounted(() => {
+    preloadInterpolationImages();
+    handleChange(0);
+});
+
+const handleChange = (value) => {
+  // 当滑块的值改变时，加载对应的图片
+  inputImagePath.value = inputImagePaths[value].src;
+  outputImagePath.value = outputImagePaths[value].src;
 };
+
 </script>
 
 <template>
@@ -70,7 +72,7 @@ export default {
                 <!-- 预加载骨架 -->
                 <el-skeleton
                 style="width: 100%"
-                :loading="inputLoading"
+                :loading="isLoading"
                 animated
                 :throttle="1000">
                   <!-- 骨架模板 -->
@@ -79,7 +81,7 @@ export default {
                   </template>
                   <!-- 实际显示图像内容 -->
                   <template #default>
-                    <el-image :src="inputImagePath" fit="scale-down"/>
+                    <img :src="inputImagePath" style="width: 100%; object-fit: contain;">
                   </template>
                 </el-skeleton>
                 <!-- 图片路径 -->
@@ -94,7 +96,7 @@ export default {
                 <!-- 预加载骨架 -->
                 <el-skeleton
                 style="width: 100%"
-                :loading="outputLoading"
+                :loading="isLoading"
                 animated
                 :throttle="1000">
                   <!-- 骨架模板 -->
@@ -103,7 +105,7 @@ export default {
                   </template>
                   <!-- 实际显示图像内容 -->
                   <template #default>
-                    <el-image :src="outputImagePath" fit="scale-down"/>
+                    <img :src="outputImagePath" style="width: 100%; object-fit: contain;">
                   </template>
                 </el-skeleton>
                 <!-- 图片路径 -->
