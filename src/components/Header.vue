@@ -35,7 +35,7 @@ const more_paper = {
 
 <template>
     <!-- 设置页首始终悬浮顶部 -->
-    <el-affix :offset="0">
+    <el-affix :offset="0" :style="{width: '100%'}">
     
     <!-- 水平导航目录 -->
     <el-menu 
