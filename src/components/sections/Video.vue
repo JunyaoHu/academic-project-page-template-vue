@@ -1,40 +1,4 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from "vue"
-import videojs from "video.js"
-import 'video.js/dist/video-js.css'
-
-const videoPlayer = ref(null)
-const myPlayer = ref(null)
-
-onMounted(() => {
-  myPlayer.value = videojs(videoPlayer.value, {
-    poster: "",
-    autoplay: true,
-    controls: true,
-    muted: true,
-    fluid: true,
-    sources: [
-      {
-        // 在这里设置你本地的视频地址
-        src: "./video/video.mp4",
-        type: 'video/mp4',
-      }
-    ],
-    playbackRates: [0.5, 1, 1.5, 2],
-      controlBar: {
-      skipButtons: {
-        forward: 5,
-        backward: 5
-      }
-    }
-  })
-})
-
-onUnmounted(() => {
-  if (myPlayer.value) {
-    myPlayer.value.dispose()
-  }
-})
 </script>
 
 <template>
@@ -48,21 +12,25 @@ onUnmounted(() => {
     <!-- 每个网站的视频的iframe可能不一致，最好在这里手动调整 -->
     <el-row justify="center">
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
+
+        <!-- local -->
         <el-container class="video-container">
-          <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=802517980&bvid=BV1qy4y1x7VV&cid=325180260&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+          <video controls muted preload playsinline width="400">
+            <source src="/video/video.mp4" type="video/mp4">
+          </video>
+        </el-container>
+        
+        <!-- bilibili -->
+        <el-container class="video-container">
+          <iframe src="//www.bilibili.com/blackboard/html5mobileplayer.html?bvid=BV1zw68YsEP9" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        </el-container>
+
+        <!-- youtube -->
+        <el-container class="video-container">
+          <iframe src="https://www.youtube.com/embed/wjZofJX0v4M?si=BFvRyc3n3fFV_f1G" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </el-container>
       </el-col>
     </el-row>
-
-    <!-- 本地视频 -->
-    <el-row justify="center">
-      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
-        <el-container class="video-container">
-          <video ref="videoPlayer" class="video-js" ></video>
-        </el-container>
-      </el-col>
-    </el-row>
-
   </div>
 </template>
 
@@ -72,9 +40,8 @@ onUnmounted(() => {
   margin: 15px 0px 0px 0px;
 }
 
-iframe {
+iframe, video {
   aspect-ratio: 16 / 9;
-  height: 100%;
   width: 100%;
 }
 
