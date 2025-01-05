@@ -85,11 +85,7 @@ const handleChange = (value) => {
                   <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
                 </template>
                 <template #default>
-                  <el-image
-                  class="output-image"
-                  :src="outputImagePath"
-                  fit="scale-down"
-                />
+                  <img :src="outputImagePath" style="width: 100%; object-fit: contain;">
                 </template>
               </el-skeleton>
             </el-col>
