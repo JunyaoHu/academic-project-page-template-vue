@@ -48,6 +48,7 @@ onMounted(() => {
 });
 
 const handleChange = (value) => {
+  indexSelected.value = value;
   outputImagePath.value = outputImagesPaths[value].src;
 };
 
