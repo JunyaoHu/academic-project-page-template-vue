@@ -76,22 +76,22 @@ const handleChange = (value) => {
           </el-col>
           <el-row justify="center" style="margin-top: 10px;">
             <el-col :span="12">
-              <!-- <el-skeleton
+              <el-skeleton
                 style="width: 100%"
                 :loading="isLoading"
                 animated
-                :throttle="1000"> -->
-                <!-- <template #template>
+                :throttle="1000">
+                <template #template>
                   <el-skeleton-item variant="image" style="width: 100%; height: 100%" />
-                </template> -->
-                <!-- <template #default> -->
+                </template>
+                <template #default>
                   <el-image
                   class="output-image"
                   :src="outputImagePath"
                   fit="scale-down"
                 />
-                <!-- </template> -->
-              <!-- </el-skeleton> -->
+                </template>
+              </el-skeleton>
             </el-col>
           </el-row>
         </el-row>
