@@ -6,6 +6,7 @@ import Carousel from './sections/Carousel.vue'
 import Video from './sections/Video.vue'
 import ImageSlider from './sections/ImageSlider.vue'
 import ImageSliderInner from './sections/ImageSliderInner.vue'
+import ImageSelector from './sections/ImageSelector.vue'
 import Echart from './sections/Echart.vue'
 import Table from './sections/Table.vue'
 import Collapse from './sections/Collapse.vue'
@@ -24,6 +25,7 @@ export default {
     Video,
     ImageSlider,
     ImageSliderInner,
+    ImageSelector,
     Echart,
     Collapse,
     Table,
@@ -50,6 +52,7 @@ export default {
   <SeletionForComparison/>
   <ImageSliderInner/>
   <ImageSlider/>
+  <ImageSelector/>
   <BibTeX/>
   <Comment/>
 </template>
