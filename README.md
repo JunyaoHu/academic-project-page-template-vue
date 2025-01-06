@@ -1,14 +1,27 @@
 # academic-project-page-template-vue
 
+![img](https://github.com/user-attachments/assets/0b6084a8-ad9c-4a1b-81b2-1f9591c7eabb)
+
 > This project is in development, and welcome any suggestions.
 
-This Vue-based repository is developed for an academic paper page template. It can elegantly present the basic details of a paper. Carousel images, embedded videos, embedded ECharts, one-click copying of BibTeX, and the comment component are all supported. It enables researchers to promote papers conveniently and intuitively. 
+This Vue-based repository is developed for an academic paper page template. It enables researchers to promote papers conveniently and intuitively. 
+
+Now it support:
+  - Icons of paper logo, author and affiliation
+  - Markdown (using `.MDX` file)
+  - Carousel
+  - Video (local, bilibili iframe, youtube iframe)
+  - ECharts
+  - Math LaTex Formula
+  - 3D and 3DGS model
+  - Other components used to visualize model results
+  - One-click copying of BibTeX
+  - Comment area
+  - ...
 
 **Example**: https://junyaohu.github.io/academic-project-page-template-vue/
 
 **Deployment Tutotial Video**: https://www.bilibili.com/video/BV1oUrfYzEqZ
-
-![123](https://github.com/user-attachments/assets/0432d357-7bed-4c48-b846-80e4cfa56f12)
 
 ## Installation
 
