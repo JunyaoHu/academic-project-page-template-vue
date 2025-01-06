@@ -21,6 +21,8 @@ onMounted(() => {
         })
         .then(() => {
             viewer.start();
+            viewer.perspectiveControls.stopListenToKeyEvents();
+            viewer.orthographicControls.stopListenToKeyEvents();
         });
     }
 });
