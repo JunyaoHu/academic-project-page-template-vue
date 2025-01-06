@@ -1,5 +1,7 @@
 # academic-project-page-template-vue
 
+![img](https://github.com/user-attachments/assets/0b6084a8-ad9c-4a1b-81b2-1f9591c7eabb)
+
 > This project is in development, and welcome any suggestions.
 
 This Vue-based repository is developed for an academic paper page template. It enables researchers to promote papers conveniently and intuitively. 
@@ -20,8 +22,6 @@ Now it support:
 **Example**: https://junyaohu.github.io/academic-project-page-template-vue/
 
 **Deployment Tutotial Video**: https://www.bilibili.com/video/BV1oUrfYzEqZ
-
-![img](https://github.com/user-attachments/assets/330304cb-635d-4c2b-b77c-389ba7a0add9)
 
 ## Installation
 
