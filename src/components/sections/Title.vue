@@ -209,6 +209,7 @@ const buttons = [
   font-family: "MyFont", Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 42px;
+  margin: 32px;
   text-align: center;
 }
 
@@ -299,6 +300,18 @@ const buttons = [
 /* 手机端链接样式处理 */
 a:-webkit-any-link {
   text-decoration: none;
+}
+
+/* 取消鼠标焦点悬浮在链接上的颜色装饰 */
+a:hover {
+  color: inherit;
+  border-bottom: none;
+}
+
+/* 链接装饰，取消下划线和链接颜色 */
+a {
+	text-decoration: None;
+	color: inherit;
 }
 
 </style>

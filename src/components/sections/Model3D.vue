@@ -72,21 +72,4 @@ scale.value = [
 
 <style scoped>
 
-/* 摘要文字居中 */
-p {
-  text-align: justify;
-} 
-
-/* 链接颜色装饰 */
-a {
-  color: #3273dc;
-  text-decoration: none;
-}
-
-/* 鼠标焦点悬浮在链接上的颜色装饰 */
-a:hover {
-  color: #848484;
-  border-bottom: dotted;
-}
-
 </style>

@@ -15,8 +15,7 @@ export default {
   methods: {
     copyVal() {
       let oInput = document.createElement('textarea');
-      let text = document.getElementsByTagName('pre')[0].innerText;
-      // console.log(text);
+      let text = document.getElementById('bibtex').innerText;
       oInput.value = text;
       document.body.appendChild(oInput);
       oInput.select();
@@ -39,10 +38,12 @@ export default {
       
       <el-row justify="center">
         <el-col class='bibtex' :xs="24" :sm="20" :md="14" :lg="12" :xl="12">
-          <el-scrollbar style="margin: 10px 20px 5px 20px;" @click="copyVal()" >
-            <div style="text-align: center; color: var(--el-text-color-secondary);">🖱️ Click here to copy BibTex.</div> 
-            <pre><code v-for="b in bibtex" class="code">{{ b }}<br/></code></pre>
-          </el-scrollbar>
+          <div style="text-align: center; color: var(--el-text-color-secondary); margin-top: 20px;">🖱️ Click here to copy BibTex.</div> 
+          <el-row>
+              <el-scrollbar style="margin: 0px 20px 5px 20px;" @click="copyVal()" >
+                <pre id="bibtex"><code v-for="b in bibtex">{{ b }}<br/></code></pre>
+              </el-scrollbar>
+          </el-row>
         </el-col>
       </el-row>
 
@@ -53,11 +54,6 @@ export default {
 
 .scrollbar-flex-content {
   display: flex;
-}
-
-/* 代码属性 */
-.code {
-  font-family: Consolas, monospace;
 }
 
 /* 卡片属性 */
@@ -77,4 +73,21 @@ export default {
 .bibtex:active{
   box-shadow: var(--el-box-shadow-lighter); 
 }
+
+pre {
+  border: none;
+  border-radius: 0px;
+  padding: 10px;
+  background: none;
+}
+
+pre code {
+  font-family: 'Consolas';
+  font-size: 16px;
+  color: black;
+  background: #ffffff;
+}
+
+
+
 </style>

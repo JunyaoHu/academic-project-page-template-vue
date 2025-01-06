@@ -37,7 +37,7 @@
 <style scoped>
 
 .video-container{
-  margin: 15px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 iframe, video {
