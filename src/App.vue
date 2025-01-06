@@ -57,7 +57,7 @@ p, li {
 }
 
 code {
-  font-family: 'Consolas';
+  font-family: 'Consolas', monospace;
   border-radius: 5px;
   padding: 2px 5px;
   background: #f2f2f2;
@@ -76,7 +76,6 @@ pre:not(pre[id=bibtex]) {
 }
 
 pre code {
-  font-family: 'Consolas';
   font-size: 16px;
   color: black;
   border: none;

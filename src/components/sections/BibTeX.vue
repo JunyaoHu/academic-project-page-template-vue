@@ -82,9 +82,7 @@ pre {
 }
 
 pre code {
-  font-family: 'Consolas';
-  font-size: 16px;
-  color: black;
+  font-size: 18px;
   background: #ffffff;
 }
 
