@@ -37,10 +37,10 @@ export default {
       </el-row>
       
       <el-row justify="center">
-        <el-col class='bibtex' :xs="24" :sm="20" :md="14" :lg="12" :xl="12">
+        <el-col class='bibtex' :xs="24" :sm="20" :md="14" :lg="12" :xl="12" @click="copyVal()" >
           <div style="text-align: center; color: var(--el-text-color-secondary); margin-top: 20px;">🖱️ Click here to copy BibTex.</div> 
           <el-row>
-              <el-scrollbar style="margin: 0px 20px 5px 20px;" @click="copyVal()" >
+              <el-scrollbar style="margin: 0px 20px 5px 20px;">
                 <pre id="bibtex"><code v-for="b in bibtex">{{ b }}<br/></code></pre>
               </el-scrollbar>
           </el-row>
