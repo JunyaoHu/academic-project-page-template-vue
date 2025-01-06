@@ -1,5 +1,5 @@
 <script setup>
-import abstract from '../mds/abstract.mdx';
+import page from '../mds/md.mdx';
 </script>
 
 <template>
@@ -8,13 +8,9 @@ import abstract from '../mds/abstract.mdx';
 
     <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="12">
-            <abstract />
+            <page />
         </el-col>
     </el-row>
 
   </div>
 </template>
-
-<style scoped>
-
-</style>

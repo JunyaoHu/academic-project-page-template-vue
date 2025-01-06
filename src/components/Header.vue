@@ -112,6 +112,11 @@ const more_paper = {
     --el-menu-horizontal-height: 50px;
 }
 
+/* 取消鼠标焦点悬浮在链接上的颜色装饰 */
+a:hover {
+  color: inherit;
+  border-bottom: none;
+}
 
 /* 链接装饰，取消下划线和链接颜色 */
 a {
