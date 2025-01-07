@@ -43,22 +43,45 @@ onMounted(() => {
           <a href="https://github.com/mkkellogg/GaussianSplats3D" target="_blank">GaussianSplats3D</a>,
           we can visualize 3DGS models here.
           </p>
-          <el-row justify="center">
-            <el-col :xs="20" :sm="24" >
-              <div id="gs"></div>
-            </el-col>
-          </el-row>
-          
+          <el-col :xs="16" :sm="21" style="margin: 0px auto;">
+            <div id="gs" class="gs-container"></div>
+          </el-col>
         </el-col>
       </el-row>
     </div>
   </template>
 
 
-<style scoped>
+<style>
 
-#gs {
-    height: 350px;
+.gs-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.spinnerPrimary0 {
+  display: none !important;
+}
+
+.spinnerOuterContainer0 {
+  height: 100% !important;
+  margin: 0 auto !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.spinnerContainerPrimary0 {
+  padding-top: 0% !important;
+  position: relative !important;
+  transform: none !important;
+  width: fit-content !important;
+  margin: 0 auto !important;
+  left: 0 !important;
+  padding: 10px 20px !important;
+}
+
+.messageContainerPrimary0 {
+  padding-top: 0% !important;
 }
 
 </style>
