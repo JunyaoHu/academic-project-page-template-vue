@@ -19,7 +19,15 @@ Now it support:
   - Comment area
   - ...
 
-**Example**: https://junyaohu.github.io/academic-project-page-template-vue/
+**Usage Example**
+
+- https://junyaohu.github.io/academic-project-page-template-vue/
+- https://longxuanx.github.io/CDFormer/
+- https://ydove0324.github.io/Imaginarium/
+- https://shailab-ipec.github.io/openfly/
+- https://lstriving.github.io/SG-Mamba/
+- https://cblxg.github.io/
+- More ...
 
 **Deployment Tutotial Video**: https://www.bilibili.com/video/BV1oUrfYzEqZ
 
