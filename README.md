@@ -27,6 +27,22 @@ Now it support:
 - https://shailab-ipec.github.io/openfly/
 - https://lstriving.github.io/SG-Mamba/
 - https://cblxg.github.io/
+- https://dajiebi.github.io/3D-Planner.github.io/
+- https://freaky1122.github.io/weightless/
+- https://jimm0011.github.io/PTTA-proj/
+- https://shoutaosun.github.io/SAFE_display/
+- https://ivyyy77.github.io/test2/
+- https://shizw695.github.io/L2RSI/
+- https://lakoj.github.io/denoising/
+- https://sepermetric.github.io/
+- https://auraluxmuse.github.io/
+- https://yyyyyxie.github.io/textflux-site/
+- https://bolixinyu.github.io/CCA-Attention-Page/
+- https://wanghaowen19.github.io/AeroBrain/
+- https://eavianwoo.github.io/singsPage/
+- https://bolixinyu.github.io/FDVS/
+- https://jimm0011.github.io/MEKD-proj/
+- https://emotion-director.github.io/
 - More ...
 
 **Deployment Tutotial Video**: https://www.bilibili.com/video/BV1oUrfYzEqZ
