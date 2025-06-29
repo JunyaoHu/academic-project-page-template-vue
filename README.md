@@ -43,6 +43,8 @@ Now it support:
 - https://bolixinyu.github.io/FDVS/
 - https://jimm0011.github.io/MEKD-proj/
 - https://emotion-director.github.io/
+- https://koorye.github.io/proj/Inspire/
+- https://koorye.github.io/proj/PCD/
 - More ...
 
 **Deployment Tutotial Video**: https://www.bilibili.com/video/BV1oUrfYzEqZ
