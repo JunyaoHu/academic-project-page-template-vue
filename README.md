@@ -171,7 +171,7 @@ After building your own cloud functions, you can edit the config in `src/compone
 
 ```
 // Fill in envId for Tencent Cloud environment; fill in address for Vercel environment (https://xxx.versel.app)
-envId: 'https://blog-comment-nvoz-8o7dxhfbd-junyaohus-projects.vercel.app', 
+envId: 'https://<YOUR WEBSITE LINK>.vercel.app', 
 // default: 'ap-shanghai'，Tencent Cloud: 'ap-shanghai' / 'ap-guangzhou'; Vercel: ''
 region: '', 
 // comment area language， more supported languages: https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
